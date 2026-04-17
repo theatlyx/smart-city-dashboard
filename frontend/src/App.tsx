@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { CityProvider } from './context/CityContext';
 import MapComponent from './components/MapComponent';
 import DashboardLayout from './components/DashboardLayout';

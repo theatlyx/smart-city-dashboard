@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { Activity, MapPin, Bell, User, Wind, Droplets, Thermometer, Bike, AlertTriangle, RefreshCw, ChevronDown, Sun, X, Calendar, CloudRain } from 'lucide-react';
-import { AreaChart, Area, LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { Activity, MapPin, Wind, Droplets, Thermometer, Bike, AlertTriangle, RefreshCw, ChevronDown, Sun, X, Calendar, CloudRain } from 'lucide-react';
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { useCityContext, CITIES } from '../context/CityContext';
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000';
@@ -67,7 +67,6 @@ export default function DashboardLayout({ solarCoords, onCloseSolar }: { solarCo
     fetchSolar();
   }, [solarCoords]);
 
-  const wxChart = useMemo(() => (weather?.forecast ?? []).map((p: any) => ({ time: fmt(p.time), temp: p.temperature_2m, rain: p.precipitation_probability })), [weather]);
   const aqChart = useMemo(() => (airQuality?.forecast ?? []).map((p: any) => ({ time: fmt(p.time), pm25: p.pm2_5 })), [airQuality]);
 
   const bikes = useMemo(() => {

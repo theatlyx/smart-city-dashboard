@@ -1,10 +1,9 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import DeckGL from '@deck.gl/react';
-import { GeoJsonLayer, ScatterplotLayer, IconLayer, TextLayer, ColumnLayer } from '@deck.gl/layers';
+import { GeoJsonLayer, ScatterplotLayer, TextLayer, ColumnLayer } from '@deck.gl/layers';
 import { AmbientLight, _SunLight as SunLight, LightingEffect } from '@deck.gl/core';
 import { Tile3DLayer } from '@deck.gl/geo-layers';
 import { Tiles3DLoader } from '@loaders.gl/3d-tiles';
-import { Map } from 'react-map-gl/maplibre';
 import { Map } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { useCityContext } from '../context/CityContext';
@@ -18,7 +17,7 @@ interface BikeStation { id: string; name: string; latitude: number; longitude: n
 interface AQStation { id: number; name: string; latitude: number; longitude: number; parameters: Record<string, { value: number | null; unit: string }>; }
 interface Aircraft { icao24: string; callsign: string; country: string; longitude: number; latitude: number; altitude: number | null; on_ground: boolean; velocity: number | null; heading: number | null; vertical_rate: number | null; }
 
-type TooltipType = 'bike' | 'aq' | 'aircraft';
+type TooltipType = 'bike' | 'aq' | 'aircraft' | 'pincode' | 'groundwater';
 interface HoverInfo { x: number; y: number; type: TooltipType; data: any; }
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
@@ -34,7 +33,7 @@ function cityBBox(lat: number, lon: number, deg = 0.6) {
 }
 
 export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat: number, lon: number) => void }) {
-  const { city, selectedLocation, setSelectedLocation, timeOfDay, activeLayer } = useCityContext();
+  const { city, setSelectedLocation, timeOfDay, activeLayer } = useCityContext();
   const [bikeStations, setBikeStations] = useState<BikeStation[]>([]);
   const [aqStations, setAqStations] = useState<AQStation[]>([]);
   const [aircraft, setAircraft] = useState<Aircraft[]>([]);
@@ -86,6 +85,15 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
     return () => clearInterval(id);
   }, [city]);
 
+  // Groundwater
+  useEffect(() => {
+    if (city.groundwaterUrl) {
+      fetch(city.groundwaterUrl).then(r => r.json()).then(data => setGroundwater(data)).catch(console.error);
+    } else {
+      setGroundwater([]);
+    }
+  }, [city.groundwaterUrl]);
+
   const handleMapClick = useCallback((info: { coordinate?: number[] | null }) => {
     if (!info.coordinate) return;
     const [lon, lat] = info.coordinate;
@@ -106,7 +114,7 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
         result.push(new GeoJsonLayer({
           id: 'buildings-geojson', data: city.geojsonUrl, extruded: true,
           getElevation: (f: any) => f.properties?.height ?? 8,
-          getFillColor: (f: any) => { const c = f.properties?.color ?? [160, 140, 130]; return [...c, 255]; },
+          getFillColor: (f: any): [number, number, number, number] => { const c = f.properties?.color ?? [160, 140, 130]; return [c[0], c[1], c[2], 255]; },
           getLineColor: [255, 255, 255, 15], lineWidthMinPixels: 0, pickable: false,
           material: { ambient: 0.3, diffuse: 0.8, shininess: 20, specularColor: [200, 200, 200] },
         }));
