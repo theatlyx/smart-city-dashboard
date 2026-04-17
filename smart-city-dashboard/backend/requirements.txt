@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+asyncpg
+databases
+SQLAlchemy
+pydantic
+pydantic-settings
+apscheduler
+httpx
+cachetools
