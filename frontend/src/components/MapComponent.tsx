@@ -1,12 +1,14 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import DeckGL from '@deck.gl/react';
-import { GeoJsonLayer, ScatterplotLayer, IconLayer, TextLayer } from '@deck.gl/layers';
+import { GeoJsonLayer, ScatterplotLayer, IconLayer, TextLayer, ColumnLayer } from '@deck.gl/layers';
 import { AmbientLight, _SunLight as SunLight, LightingEffect } from '@deck.gl/core';
 import { Tile3DLayer } from '@deck.gl/geo-layers';
 import { Tiles3DLoader } from '@loaders.gl/3d-tiles';
 import { Map } from 'react-map-gl/maplibre';
+import { Map } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { useCityContext } from '../context/CityContext';
+import { LineChart, Line, XAxis, YAxis, Tooltip as RechartsTooltip, ResponsiveContainer } from 'recharts';
 
 const MAP_STYLE = 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json';
 const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000';
@@ -36,6 +38,7 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
   const [bikeStations, setBikeStations] = useState<BikeStation[]>([]);
   const [aqStations, setAqStations] = useState<AQStation[]>([]);
   const [aircraft, setAircraft] = useState<Aircraft[]>([]);
+  const [groundwater, setGroundwater] = useState<any[]>([]);
   const [hoverInfo, setHoverInfo] = useState<HoverInfo | null>(null);
 
   // Controlled view state — user interactions update it, city switches fly to new center
@@ -123,6 +126,23 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
           setHoverInfo(object ? { type: 'pincode', data: object.properties, x, y } : null);
         }
       }));
+    } else if (activeLayer === 'groundwater' && groundwater.length > 0) {
+      result.push(new ColumnLayer({
+        id: 'groundwater-columns',
+        data: groundwater,
+        diskResolution: 12,
+        radius: 250,
+        extruded: true,
+        pickable: true,
+        getElevation: (d: any) => d.latest_depth * 15, // Scale depth for visibility
+        getPosition: (d: any) => [d.lon, d.lat],
+        getFillColor: (d: any) => [59, 130, 246, 220],
+        getLineColor: [255, 255, 255],
+        material: { ambient: 0.5, diffuse: 0.8, shininess: 32, specularColor: [255, 255, 255] },
+        onHover: ({ object, x, y }: any) => {
+          setHoverInfo(object ? { type: 'groundwater', data: object, x, y } : null);
+        }
+      }));
     }
 
     // City bikes
@@ -185,7 +205,7 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
     }
 
     return result;
-  }, [city, bikeStations, aqStations, aircraft, activeLayer]);
+  }, [city, bikeStations, aqStations, aircraft, activeLayer, groundwater]);
 
   const lightingEffect = useMemo(() => {
     const ambientLight = new AmbientLight({ color: [255, 255, 255], intensity: 0.8 });
@@ -215,11 +235,12 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
 
       {/* Tooltip */}
       {hoverInfo && (
-        <div style={{ position: 'absolute', left: hoverInfo.x + 16, top: hoverInfo.y - 10, pointerEvents: 'none', background: 'rgba(10, 15, 30, 0.96)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 12, padding: '12px 16px', fontSize: 12, color: '#e2e8f0', backdropFilter: 'blur(16px)', minWidth: 190, zIndex: 100, boxShadow: '0 8px 32px rgba(0,0,0,0.6)' }}>
+        <div style={{ position: 'absolute', left: hoverInfo.x + 16, top: hoverInfo.y - 10, pointerEvents: 'none', background: 'rgba(10, 15, 30, 0.96)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 12, padding: '12px 16px', fontSize: 12, color: '#e2e8f0', backdropFilter: 'blur(16px)', minWidth: hoverInfo.type === 'groundwater' ? 320 : 190, zIndex: 100, boxShadow: '0 8px 32px rgba(0,0,0,0.6)' }}>
           {hoverInfo.type === 'bike' && <BikeTooltip station={hoverInfo.data} />}
           {hoverInfo.type === 'aq' && <AQTooltip station={hoverInfo.data} />}
           {hoverInfo.type === 'aircraft' && <AircraftTooltip ac={hoverInfo.data} />}
           {hoverInfo.type === 'pincode' && <PincodeTooltip props={hoverInfo.data} />}
+          {hoverInfo.type === 'groundwater' && <GroundwaterTooltip data={hoverInfo.data} />}
         </div>
       )}
 
@@ -293,6 +314,29 @@ function PincodeTooltip({ props }: { props: any }) {
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16 }}><span>Type</span><span style={{ color: '#e2e8f0' }}>{props.Office_Type ?? '--'}</span></div>
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16 }}><span>Division</span><span style={{ color: '#e2e8f0', textAlign: 'right' }}>{props.Division_Name ?? '--'}</span></div>
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16 }}><span>Region</span><span style={{ color: '#e2e8f0' }}>{props.Region_Name ?? '--'}</span></div>
+    </div>
+  </>);
+}
+
+function GroundwaterTooltip({ data }: { data: any }) {
+  const isRising = data.change < 0;
+  return (<>
+    <div style={{ fontWeight: 700, fontSize: 14, color: '#3b82f6', marginBottom: 4 }}>💧 {data.name}</div>
+    <div style={{ fontSize: 11, color: '#94a3b8', marginBottom: 12 }}>
+      Current Depth: <span style={{ color: '#e2e8f0', fontWeight: 600 }}>{data.latest_depth.toFixed(1)}m</span> 
+      <span style={{ marginLeft: 8, color: isRising ? '#34d399' : '#f43f5e' }}>
+        ({isRising ? 'Rose by' : 'Dropped by'} {Math.abs(data.change).toFixed(1)}m since 2000)
+      </span>
+    </div>
+    <div style={{ height: 120, width: '100%' }}>
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart data={data.history} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
+          <XAxis dataKey="date" fontSize={9} tickLine={false} axisLine={false} minTickGap={30} tickFormatter={(t) => t.split('-')[0]} />
+          <YAxis fontSize={9} tickLine={false} axisLine={false} tickFormatter={(v) => `${v}m`} domain={['auto', 'auto']} reversed />
+          <RechartsTooltip contentStyle={{ backgroundColor: '#0f172a', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 8, fontSize: 11 }} labelFormatter={(l) => `Date: ${l}`} />
+          <Line type="monotone" dataKey="level" stroke="#3b82f6" strokeWidth={2} dot={false} name="Depth" />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   </>);
 }

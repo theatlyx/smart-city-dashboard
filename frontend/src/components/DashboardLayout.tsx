@@ -102,6 +102,13 @@ export default function DashboardLayout({ solarCoords, onCloseSolar }: { solarCo
                 style={{ padding: '4px 10px', borderRadius: 16, border: 'none', background: activeLayer === 'demographics' ? 'rgba(167,139,250,0.2)' : 'transparent', color: activeLayer === 'demographics' ? '#a78bfa' : '#94a3b8', fontSize: 11, fontWeight: 600, cursor: 'pointer' }}>
                 Zoning View
               </button>
+              {city.groundwaterUrl && (
+                <button 
+                  onClick={() => setActiveLayer('groundwater')}
+                  style={{ padding: '4px 10px', borderRadius: 16, border: 'none', background: activeLayer === 'groundwater' ? 'rgba(59,130,246,0.2)' : 'transparent', color: activeLayer === 'groundwater' ? '#60a5fa' : '#94a3b8', fontSize: 11, fontWeight: 600, cursor: 'pointer' }}>
+                  Groundwater View
+                </button>
+              )}
             </div>
           )}
 
