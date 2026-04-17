@@ -47,7 +47,18 @@ Currently configured with digital twins for:
 | ☀️ **Solar Potential Engine** | Click on any building to calculate its estimated annual solar generation (kWh/yr) using satellite irradiance data. | PVGIS (EU) |
 | 🚲 **Mobility Networks** | Live monitoring of city bike networks (capacities, empty docks) rendered directly on the map. | CityBik.es |
 | 📡 **CPCB Sensor Networks** | Real-time air quality index monitoring from physical stations across Indian cities. | OpenAQ |
-| 🚨 **Automated Alerts** | Dynamic UI that flags empty bike stations, hazardous AQI events, and more based on the active city. | - |
+| 🚦 **Automated Alerts** | Dynamic UI that flags empty bike stations, hazardous AQI events, and more based on the active city. | - |
+
+---
+
+### Dynamic Environment (Time Travel)
+The dashboard includes a Time Travel slider that calculates the exact geographic position of the sun based on the selected city's latitude/longitude and the time of day. This creates realistic, sweeping shadows across extruded 3D buildings.
+
+<p align="center">
+  <img src="frontend/public/screenshots/day_shadows.jpg" width="48%" />
+  <img src="frontend/public/screenshots/night_shadows.jpg" width="48%" />
+</p>
+*Early morning long shadows vs. Night time ambiance.*
 
 ---
 
