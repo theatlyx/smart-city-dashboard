@@ -48,7 +48,7 @@ export const CITIES: Record<string, CityConfig> = {
     buildings: 'geojson',
     geojsonUrl: '/buildings_ahmedabad.json',
     pincodeUrl: '/ahmedabad_pincodes.json',
-    groundwaterUrl: '/ahmedabad_groundwater.json',
+    groundwaterUrl: '/ahmedabad_groundwater_zones.json',
     features: ['weather', 'air-quality', 'openaq'],
     timezone: 'Asia/Kolkata',
   },

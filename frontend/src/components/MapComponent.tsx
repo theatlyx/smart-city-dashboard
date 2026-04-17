@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import DeckGL from '@deck.gl/react';
-import { GeoJsonLayer, ScatterplotLayer, TextLayer, ColumnLayer } from '@deck.gl/layers';
+import { GeoJsonLayer, ScatterplotLayer, TextLayer } from '@deck.gl/layers';
 import { AmbientLight, _SunLight as SunLight, LightingEffect } from '@deck.gl/core';
 import { Tile3DLayer } from '@deck.gl/geo-layers';
 import { Tiles3DLoader } from '@loaders.gl/3d-tiles';
@@ -37,7 +37,7 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
   const [bikeStations, setBikeStations] = useState<BikeStation[]>([]);
   const [aqStations, setAqStations] = useState<AQStation[]>([]);
   const [aircraft, setAircraft] = useState<Aircraft[]>([]);
-  const [groundwater, setGroundwater] = useState<any[]>([]);
+  const [groundwater, setGroundwater] = useState<any>(null);
   const [hoverInfo, setHoverInfo] = useState<HoverInfo | null>(null);
 
   // Controlled view state — user interactions update it, city switches fly to new center
@@ -134,21 +134,22 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
           setHoverInfo(object ? { type: 'pincode', data: object.properties, x, y } : null);
         }
       }));
-    } else if (activeLayer === 'groundwater' && groundwater.length > 0) {
-      result.push(new ColumnLayer({
-        id: 'groundwater-columns',
+    } else if (activeLayer === 'groundwater' && groundwater) {
+      result.push(new GeoJsonLayer({
+        id: 'groundwater-choropleth',
         data: groundwater,
-        diskResolution: 12,
-        radius: 250,
         extruded: true,
         pickable: true,
-        getElevation: (d: any) => Math.max(10, Math.abs(d.change) * 100), // Scale change for visibility
-        getPosition: (d: any) => [d.lon, d.lat],
-        getFillColor: (d: any) => d.change > 0 ? [244, 63, 94, 220] : [52, 211, 153, 220], // Red if dropped, Green if rose
-        getLineColor: [255, 255, 255],
+        getElevation: (f: any) => Math.max(10, Math.abs(f.properties?.gw_change ?? 0) * 100),
+        getFillColor: (f: any) => {
+          const change = f.properties?.gw_change ?? 0;
+          return change > 0 ? [244, 63, 94, 200] : [52, 211, 153, 200];
+        },
+        getLineColor: [255, 255, 255, 100],
+        lineWidthMinPixels: 1,
         material: { ambient: 0.5, diffuse: 0.8, shininess: 32, specularColor: [255, 255, 255] },
         onHover: ({ object, x, y }: any) => {
-          setHoverInfo(object ? { type: 'groundwater', data: object, x, y } : null);
+          setHoverInfo(object ? { type: 'groundwater', data: object.properties, x, y } : null);
         }
       }));
     }
@@ -327,18 +328,19 @@ function PincodeTooltip({ props }: { props: any }) {
 }
 
 function GroundwaterTooltip({ data }: { data: any }) {
-  const isRising = data.change < 0;
+  const isRising = (data.gw_change ?? 0) < 0;
   return (<>
-    <div style={{ fontWeight: 700, fontSize: 14, color: '#3b82f6', marginBottom: 4 }}>💧 {data.name}</div>
+    <div style={{ fontWeight: 700, fontSize: 14, color: '#3b82f6', marginBottom: 4 }}>💧 {data.Office_Name ?? 'Unknown Region'} ({data.PIN_Code})</div>
     <div style={{ fontSize: 11, color: '#94a3b8', marginBottom: 12 }}>
-      Current Depth: <span style={{ color: '#e2e8f0', fontWeight: 600 }}>{data.latest_depth.toFixed(1)}m</span> 
+      Near Sensor: {data.gw_sensor_name}<br/>
+      Current Depth: <span style={{ color: '#e2e8f0', fontWeight: 600 }}>{data.gw_latest_depth?.toFixed(1)}m</span> 
       <span style={{ marginLeft: 8, color: isRising ? '#34d399' : '#f43f5e' }}>
-        ({isRising ? 'Rose by' : 'Dropped by'} {Math.abs(data.change).toFixed(1)}m since 2000)
+        ({isRising ? 'Rose by' : 'Dropped by'} {Math.abs(data.gw_change ?? 0).toFixed(1)}m since 2000)
       </span>
     </div>
     <div style={{ height: 120, width: '100%' }}>
       <ResponsiveContainer width="100%" height="100%">
-        <LineChart data={data.history} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
+        <LineChart data={data.gw_history ?? []} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
           <XAxis dataKey="date" fontSize={9} tickLine={false} axisLine={false} minTickGap={30} tickFormatter={(t) => t.split('-')[0]} />
           <YAxis fontSize={9} tickLine={false} axisLine={false} tickFormatter={(v) => `${v}m`} domain={['auto', 'auto']} reversed />
           <RechartsTooltip contentStyle={{ backgroundColor: '#0f172a', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 8, fontSize: 11 }} labelFormatter={(l) => `Date: ${l}`} />
