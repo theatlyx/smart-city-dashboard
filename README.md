@@ -45,6 +45,8 @@ Currently configured with digital twins for:
 | 🌡️ **Hyper-Local Climate** | Click anywhere on the 3D map to fetch exact weather and air quality for that specific latitude/longitude. | Open-Meteo |
 | ✈️ **Live Aviation Tracking** | Real-time aircraft positions, altitudes, velocities, and headings overhead. | OpenSky Network |
 | ☀️ **Solar Potential Engine** | Click on any building to calculate its estimated annual solar generation (kWh/yr) using satellite irradiance data. | PVGIS (EU) |
+| 📊 **Demographics & Zoning** | Interactive choropleth map of postal codes/zones. Hover to reveal Post Office metadata for urban planning. | Indian Census |
+| 💧 **Historical Groundwater** | 26-year historical groundwater analysis (2000-2026). Visually maps depletion/rising hotspots across administrative boundaries with interactive time-series charts. | CGWB |
 | 🚲 **Mobility Networks** | Live monitoring of city bike networks (capacities, empty docks) rendered directly on the map. | CityBik.es |
 | 📡 **CPCB Sensor Networks** | Real-time air quality index monitoring from physical stations across Indian cities. | OpenAQ |
 | 🚦 **Automated Alerts** | Dynamic UI that flags empty bike stations, hazardous AQI events, and more based on the active city. | - |
@@ -64,6 +66,24 @@ The dashboard includes a Time Travel slider that calculates the exact geographic
 
 ![Solar Potential Overlay](frontend/public/screenshots/solar_preview.jpg)
 *Interactive solar potential estimations based on location.*
+
+---
+
+### Demographics & Environmental History
+
+Moving beyond real-time API data, the Digital Twin features heavily optimized pipelines to process massive governmental datasets into interactive layers:
+
+<p align="center">
+  <img src="frontend/public/screenshots/zoning_view.jpg" width="48%" />
+  <img src="frontend/public/screenshots/groundwater_view.jpg" width="48%" />
+</p>
+*Left: Administrative Zoning View. Right: Historical Groundwater Depletion Choropleth.*
+
+* **Administrative Zoning View:** Transforms the 3D map into a 2D choropleth displaying precise administrative boundaries (e.g., Pincodes) to assist urban planners.
+* **Groundwater Analysis:** Maps 26 years of water depth sensor data (2000–2026) onto administrative zones using Spatial Joins (Nearest Neighbor).
+  * **Red Zones:** Water levels have dropped since 2000 (Depletion).
+  * **Green Zones:** Water levels have risen since 2000.
+  * Hovering over any zone reveals an interactive `recharts` Line Chart of the 26-year historical trend.
 
 ## 🛠️ Architecture
 
