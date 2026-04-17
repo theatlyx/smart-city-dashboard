@@ -134,9 +134,9 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
         radius: 250,
         extruded: true,
         pickable: true,
-        getElevation: (d: any) => d.latest_depth * 15, // Scale depth for visibility
+        getElevation: (d: any) => Math.max(10, Math.abs(d.change) * 100), // Scale change for visibility
         getPosition: (d: any) => [d.lon, d.lat],
-        getFillColor: (d: any) => [59, 130, 246, 220],
+        getFillColor: (d: any) => d.change > 0 ? [244, 63, 94, 220] : [52, 211, 153, 220], // Red if dropped, Green if rose
         getLineColor: [255, 255, 255],
         material: { ambient: 0.5, diffuse: 0.8, shininess: 32, specularColor: [255, 255, 255] },
         onHover: ({ object, x, y }: any) => {
