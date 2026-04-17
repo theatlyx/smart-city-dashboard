@@ -20,7 +20,7 @@ function fmt(timeStr: string) {
 const tip = { backgroundColor: '#0f172a', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 8, fontSize: 11 };
 
 export default function DashboardLayout({ solarCoords, onCloseSolar }: { solarCoords: any, onCloseSolar: () => void }) {
-  const { city, setCity, selectedLocation } = useCityContext();
+  const { city, setCity, selectedLocation, timeOfDay, setTimeOfDay } = useCityContext();
   const [weather, setWeather] = useState<any>(null);
   const [airQuality, setAirQuality] = useState<any>(null);
   const [cityBikes, setCityBikes] = useState<any>(null);
@@ -248,6 +248,21 @@ export default function DashboardLayout({ solarCoords, onCloseSolar }: { solarCo
               )}
             </div>
           )}
+
+          {/* Time Travel Slider */}
+          <div className="glass-panel pointer-events-auto" style={{ position: 'absolute', bottom: 30, left: '50%', transform: 'translateX(-50%)', width: 400, padding: '12px 20px', zIndex: 50, display: 'flex', alignItems: 'center', gap: 15, background: 'rgba(15,23,42,0.85)', backdropFilter: 'blur(12px)', borderRadius: 30, border: '1px solid rgba(255,255,255,0.1)' }}>
+            <Sun size={18} style={{ color: timeOfDay >= 6 && timeOfDay <= 19 ? '#fbbf24' : '#64748b' }} />
+            <input 
+              type="range" 
+              min="0" max="23.99" step="0.1" 
+              value={timeOfDay} 
+              onChange={(e) => setTimeOfDay(parseFloat(e.target.value))}
+              style={{ flex: 1, accentColor: '#00d2ff', cursor: 'ew-resize' }}
+            />
+            <div style={{ fontSize: 13, fontWeight: 700, width: 45, textAlign: 'right', color: '#e2e8f0', fontFamily: 'monospace' }}>
+              {Math.floor(timeOfDay).toString().padStart(2, '0')}:{Math.floor((timeOfDay % 1) * 60).toString().padStart(2, '0')}
+            </div>
+          </div>
         </div>
 
         {/* Right Panel */}

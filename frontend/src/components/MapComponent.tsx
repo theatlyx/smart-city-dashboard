@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import DeckGL from '@deck.gl/react';
 import { GeoJsonLayer, ScatterplotLayer, IconLayer, TextLayer } from '@deck.gl/layers';
+import { AmbientLight, _SunLight as SunLight, LightingEffect } from '@deck.gl/core';
 import { Tile3DLayer } from '@deck.gl/geo-layers';
 import { Tiles3DLoader } from '@loaders.gl/3d-tiles';
 import { Map } from 'react-map-gl/maplibre';
@@ -31,7 +32,7 @@ function cityBBox(lat: number, lon: number, deg = 0.6) {
 }
 
 export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat: number, lon: number) => void }) {
-  const { city, setSelectedLocation } = useCityContext();
+  const { city, selectedLocation, setSelectedLocation, timeOfDay } = useCityContext();
   const [bikeStations, setBikeStations] = useState<BikeStation[]>([]);
   const [aqStations, setAqStations] = useState<AQStation[]>([]);
   const [aircraft, setAircraft] = useState<Aircraft[]>([]);
@@ -101,7 +102,7 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
       result.push(new GeoJsonLayer({
         id: 'buildings-geojson', data: city.geojsonUrl, extruded: true,
         getElevation: (f: any) => f.properties?.height ?? 8,
-        getFillColor: (f: any) => { const c = f.properties?.color ?? [160, 140, 130]; return [...c, 220]; },
+        getFillColor: (f: any) => { const c = f.properties?.color ?? [160, 140, 130]; return [...c, 255]; },
         getLineColor: [255, 255, 255, 15], lineWidthMinPixels: 0, pickable: false,
         material: { ambient: 0.3, diffuse: 0.8, shininess: 20, specularColor: [200, 200, 200] },
       }));
@@ -169,6 +170,18 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
     return result;
   }, [city, bikeStations, aqStations, aircraft]);
 
+  const lightingEffect = useMemo(() => {
+    const ambientLight = new AmbientLight({ color: [255, 255, 255], intensity: 0.8 });
+    const date = new Date();
+    date.setHours(Math.floor(timeOfDay), Math.floor((timeOfDay % 1) * 60), 0, 0);
+    const sunLight = new SunLight({
+      timestamp: date.getTime(),
+      color: [255, 255, 255],
+      intensity: 2.5,
+    });
+    return new LightingEffect({ ambientLight, sunLight });
+  }, [timeOfDay]);
+
   return (
     <div className="absolute inset-0 z-0">
       <DeckGL
@@ -176,6 +189,7 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
         onViewStateChange={({ viewState: vs }: any) => setViewState(vs)}
         controller={true}
         layers={layers}
+        effects={[lightingEffect]}
         onClick={handleMapClick}
         getCursor={({ isDragging }) => (isDragging ? 'grabbing' : 'crosshair')}
       >

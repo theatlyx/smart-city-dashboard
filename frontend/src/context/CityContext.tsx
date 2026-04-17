@@ -62,6 +62,8 @@ interface CityContextValue {
   setCity: (id: string) => void;
   selectedLocation: SelectedLocation;
   setSelectedLocation: (loc: SelectedLocation) => void;
+  timeOfDay: number;
+  setTimeOfDay: (t: number) => void;
 }
 
 const CityContext = createContext<CityContextValue | null>(null);
@@ -73,6 +75,8 @@ export function CityProvider({ children }: { children: ReactNode }) {
     lon: 24.9384,
     label: 'Helsinki City Center',
   });
+  
+  const [timeOfDay, setTimeOfDay] = useState<number>(new Date().getHours() + new Date().getMinutes() / 60);
 
   const setCity = useCallback((id: string) => {
     if (CITIES[id]) {
@@ -83,7 +87,7 @@ export function CityProvider({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <CityContext.Provider value={{ city: CITIES[cityId], setCity, selectedLocation, setSelectedLocation }}>
+    <CityContext.Provider value={{ city: CITIES[cityId], setCity, selectedLocation, setSelectedLocation, timeOfDay, setTimeOfDay }}>
       {children}
     </CityContext.Provider>
   );
