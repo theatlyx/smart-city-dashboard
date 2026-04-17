@@ -1,62 +1,96 @@
-# 🏙️ Smart City Digital Twin Dashboard
+<div align="center">
+  <img src="https://raw.githubusercontent.com/theatlyx/smart-city-dashboard/main/frontend/public/icons.svg" alt="Logo" width="80" height="80">
+  <h1 align="center">Smart City Digital Twin</h1>
+  
+  <p align="center">
+    A high-performance, open-source 3D Smart City Dashboard capable of visualizing multi-city data with photorealistic reality meshes, extruded satellite footprints, and real-time geospatial intelligence.
+    <br />
+    <br />
+    <a href="#-key-features"><strong>Explore the features »</strong></a>
+    <br />
+    <br />
+    <a href="#-quick-start">Quick Start</a>
+    ·
+    <a href="https://github.com/theatlyx/smart-city-dashboard/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/theatlyx/smart-city-dashboard/issues">Request Feature</a>
+  </p>
 
-A high-performance, open-source 3D Smart City Dashboard capable of visualizing multi-city data with photorealistic reality meshes, extruded satellite footprints, and real-time geospatial intelligence.
+  <p align="center">
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+    <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+    <img src="https://img.shields.io/badge/deck.gl-000000?style=for-the-badge&logo=uber&logoColor=white" alt="deck.gl" />
+    <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
+  </p>
+</div>
 
-Currently configured with digital twins for **Helsinki, Finland** and **Ahmedabad, India**.
+<br />
 
-![Dashboard Preview](https://kartta.hel.fi/3d/assets/img/helsinki3d.jpg) *(Replace with actual screenshot)*
+![Dashboard Preview](frontend/public/screenshots/dashboard_preview.jpg)
+
+## 🌟 About The Project
+
+Building a truly dynamic digital twin shouldn't cost millions. This dashboard is built entirely on **100% free, open-source data APIs** and renders massive datasets in the browser at 60 FPS using WebGL.
+
+Currently configured with digital twins for:
+- 🇫🇮 **Helsinki, Finland** (Utilizing the official 2024 Helsinki 3D reality mesh)
+- 🇮🇳 **Ahmedabad, India** (Extruding >80,000 building footprints dynamically via OpenStreetMap)
 
 ## ✨ Key Features
 
-- **Multi-City Architecture**: Seamlessly switch between cities with entirely different data profiles, API features, and 3D rendering modes.
-- **Photorealistic 3D Rendering**: 
-  - **Helsinki**: Streams the official 2024 Helsinki 3D reality mesh via 3D Tiles.
-  - **Ahmedabad**: Renders >80,000 extruded building footprints dynamically from OpenStreetMap.
-- **Hyper-Local Climate Data**: Click anywhere on the map to fetch precise, location-aware weather and air quality for that exact latitude and longitude via Open-Meteo.
-- **Live Aviation Tracking**: Real-time aircraft positions, altitudes, and headings via the OpenSky Network.
-- **Solar Potential Estimation**: Interactive rooftop solar generation estimates (kWh/yr) using satellite irradiance data from PVGIS (EU Commission).
-- **Public Infrastructure Monitoring**:
-  - Live city bike station capacities (Helsinki).
-  - Live CPCB Air Quality sensor network monitoring (Ahmedabad).
-- **Automated Alerts**: Adapts to the selected city to automatically warn about low bike stocks, poor air quality, and other actionable events.
-- **Dark Mode UI**: A highly polished, responsive, and reactive dashboard built with React and Tailwind CSS.
+| Feature | Description | Source |
+|---------|-------------|--------|
+| 🏙️ **Multi-City Architecture** | Switch seamlessly between cities with different API layers and 3D rendering modes (3D Tiles vs. GeoJSON extrusion). | - |
+| 🌡️ **Hyper-Local Climate** | Click anywhere on the 3D map to fetch exact weather and air quality for that specific latitude/longitude. | Open-Meteo |
+| ✈️ **Live Aviation Tracking** | Real-time aircraft positions, altitudes, velocities, and headings overhead. | OpenSky Network |
+| ☀️ **Solar Potential Engine** | Click on any building to calculate its estimated annual solar generation (kWh/yr) using satellite irradiance data. | PVGIS (EU) |
+| 🚲 **Mobility Networks** | Live monitoring of city bike networks (capacities, empty docks) rendered directly on the map. | CityBik.es |
+| 📡 **CPCB Sensor Networks** | Real-time air quality index monitoring from physical stations across Indian cities. | OpenAQ |
+| 🚨 **Automated Alerts** | Dynamic UI that flags empty bike stations, hazardous AQI events, and more based on the active city. | - |
 
-## 🛠️ Tech Stack
+---
 
-**Frontend:**
-- React 18 + Vite
-- [Deck.gl](https://deck.gl/) (GeoJsonLayer, Tile3DLayer, ScatterplotLayer)
-- MapLibre GL JS
-- Recharts (Time-series data visualization)
-- Tailwind CSS & Lucide Icons
+![Solar Potential Overlay](frontend/public/screenshots/solar_preview.jpg)
+*Interactive solar potential estimations based on location.*
 
-**Backend:**
-- FastAPI (Python 3)
-- Uvicorn
-- Cachetools (90s TTL memory caching to prevent API rate limits)
+## 🛠️ Architecture
 
-**Data Sources (100% Free & Open):**
-- [Open-Meteo](https://open-meteo.com/) (Weather & AQ)
-- [OpenAQ](https://openaq.org/) (Real-world AQ sensors)
-- [OpenSky Network](https://opensky-network.org/) (Aviation)
-- [PVGIS](https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en) (Solar Potential)
-- [CityBik.es](http://api.citybik.es/v2/) (Mobility)
-- [OpenStreetMap](https://www.openstreetmap.org/) (Building footprints via Overpass)
+* **Frontend:** React 18, Vite, Deck.gl (for high-performance WebGL geospatial layers), MapLibre GL, Recharts, and Tailwind CSS.
+* **Backend:** FastAPI proxy. The Python backend fetches, formats, and caches (90s TTL) responses from various free external APIs to prevent the browser from hitting rate limits.
+* **Data Pipelines:** Python scripts interacting with the Overpass API to dynamically fetch and process satellite/OSM data into optimized GeoJSON.
 
 ## 🚀 Quick Start
 
-### 1. Start the Backend (FastAPI)
-The backend acts as a caching proxy for the various external APIs to ensure you don't hit rate limits.
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+* Node.js (v18+)
+* Python 3.10+
+
+### 1. Start the Backend (FastAPI Proxy)
+
+The backend is strictly required to bypass rate limits and format the data.
 
 ```bash
 cd backend
 python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
+# Activate the virtual environment
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
 pip install fastapi uvicorn requests cachetools
+
+# Start the server
 uvicorn app.main:app --reload --port 8000
 ```
 
-### 2. Start the Frontend (React + Vite)
+### 2. Start the Frontend
+
+In a new terminal window:
+
 ```bash
 cd frontend
 npm install
@@ -67,14 +101,49 @@ Open `http://localhost:5173` in your browser.
 
 ## 🌍 Adding a New City
 
-The architecture is highly modular. To add a new city:
+The application is highly modular. To add your own city:
+
 1. Open `frontend/src/context/CityContext.tsx`.
-2. Add a new entry to the `CITIES` object with coordinates, zoom level, building rendering mode (`3d-tiles` or `geojson`), and supported `features` (e.g., `['weather', 'openaq']`).
-3. If using OSM footprints (`geojson`), run the automated pipeline script:
+2. Add a new object to the `CITIES` mapping:
+   ```typescript
+   my_city: {
+     id: 'my_city',
+     name: 'My City',
+     lat: 40.7128,
+     lon: -74.0060,
+     zoom: 13,
+     pitch: 60,
+     bearing: 0,
+     flag: '🇺🇸',
+     buildings: 'geojson',
+     geojsonUrl: '/buildings_my_city.json',
+     features: ['weather', 'openaq'] // Toggle APIs here
+   }
+   ```
+3. Run the automated data pipeline script to fetch building footprints for your city bounding box:
    ```bash
    python backend/scripts/fetch_ahmedabad_buildings.py
    ```
-   (Modify the bounding box for your target city).
+   *(Modify the script's coordinates to match your city, then move the output JSON to `frontend/public/`)*.
+
+## 🤝 Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📄 License
-MIT License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 👏 Acknowledgments
+
+* [Deck.gl](https://deck.gl/) for the incredible WebGL framework.
+* Official Helsinki 3D Reality Mesh team.
+* [Open-Meteo](https://open-meteo.com/) for open-source weather data.
