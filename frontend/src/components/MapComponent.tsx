@@ -32,7 +32,7 @@ function cityBBox(lat: number, lon: number, deg = 0.6) {
 }
 
 export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat: number, lon: number) => void }) {
-  const { city, selectedLocation, setSelectedLocation, timeOfDay } = useCityContext();
+  const { city, selectedLocation, setSelectedLocation, timeOfDay, activeLayer } = useCityContext();
   const [bikeStations, setBikeStations] = useState<BikeStation[]>([]);
   const [aqStations, setAqStations] = useState<AQStation[]>([]);
   const [aircraft, setAircraft] = useState<Aircraft[]>([]);
@@ -95,16 +95,33 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
   const layers = useMemo(() => {
     const result: any[] = [];
 
-    // 3D Buildings
-    if (city.buildings === '3d-tiles' && city.tilesUrl) {
-      result.push(new Tile3DLayer({ id: 'reality-mesh', data: city.tilesUrl, loader: Tiles3DLoader, pickable: false }));
-    } else if (city.buildings === 'geojson' && city.geojsonUrl) {
+    if (activeLayer === 'buildings') {
+      // 3D Buildings
+      if (city.buildings === '3d-tiles' && city.tilesUrl) {
+        result.push(new Tile3DLayer({ id: 'reality-mesh', data: city.tilesUrl, loader: Tiles3DLoader, pickable: false }));
+      } else if (city.buildings === 'geojson' && city.geojsonUrl) {
+        result.push(new GeoJsonLayer({
+          id: 'buildings-geojson', data: city.geojsonUrl, extruded: true,
+          getElevation: (f: any) => f.properties?.height ?? 8,
+          getFillColor: (f: any) => { const c = f.properties?.color ?? [160, 140, 130]; return [...c, 255]; },
+          getLineColor: [255, 255, 255, 15], lineWidthMinPixels: 0, pickable: false,
+          material: { ambient: 0.3, diffuse: 0.8, shininess: 20, specularColor: [200, 200, 200] },
+        }));
+      }
+    } else if (activeLayer === 'demographics' && city.pincodeUrl) {
+      // Demographics/Zoning Layer
       result.push(new GeoJsonLayer({
-        id: 'buildings-geojson', data: city.geojsonUrl, extruded: true,
-        getElevation: (f: any) => f.properties?.height ?? 8,
-        getFillColor: (f: any) => { const c = f.properties?.color ?? [160, 140, 130]; return [...c, 255]; },
-        getLineColor: [255, 255, 255, 15], lineWidthMinPixels: 0, pickable: false,
-        material: { ambient: 0.3, diffuse: 0.8, shininess: 20, specularColor: [200, 200, 200] },
+        id: 'demographics-geojson', data: city.pincodeUrl, extruded: false,
+        getFillColor: (f: any) => {
+          // Generate a consistent but distinct color based on pincode string
+          const code = f.properties?.PIN_Code ?? '0';
+          const hash = code.split('').reduce((a:number,b:string)=>(((a<<5)-a)+b.charCodeAt(0))|0,0);
+          return [Math.abs((hash * 13) % 200) + 55, Math.abs((hash * 47) % 200) + 55, Math.abs((hash * 97) % 200) + 55, 120];
+        },
+        getLineColor: [255, 255, 255, 200], lineWidthMinPixels: 2, pickable: true,
+        onHover: ({ object, x, y }: any) => {
+          setHoverInfo(object ? { type: 'pincode', data: object.properties, x, y } : null);
+        }
       }));
     }
 
@@ -168,7 +185,7 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
     }
 
     return result;
-  }, [city, bikeStations, aqStations, aircraft]);
+  }, [city, bikeStations, aqStations, aircraft, activeLayer]);
 
   const lightingEffect = useMemo(() => {
     const ambientLight = new AmbientLight({ color: [255, 255, 255], intensity: 0.8 });
@@ -202,6 +219,7 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
           {hoverInfo.type === 'bike' && <BikeTooltip station={hoverInfo.data} />}
           {hoverInfo.type === 'aq' && <AQTooltip station={hoverInfo.data} />}
           {hoverInfo.type === 'aircraft' && <AircraftTooltip ac={hoverInfo.data} />}
+          {hoverInfo.type === 'pincode' && <PincodeTooltip props={hoverInfo.data} />}
         </div>
       )}
 
@@ -263,6 +281,18 @@ function AircraftTooltip({ ac }: { ac: Aircraft }) {
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16 }}><span>Heading</span><span style={{ color: '#e2e8f0' }}>{hdg}</span></div>
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16 }}><span>Status</span><span style={{ color: '#93c5fd' }}>{vr}</span></div>
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16 }}><span>Country</span><span>{ac.country}</span></div>
+    </div>
+  </>);
+}
+
+function PincodeTooltip({ props }: { props: any }) {
+  return (<>
+    <div style={{ fontWeight: 700, fontSize: 13, color: '#a78bfa', marginBottom: 8 }}>📍 Pincode: {props.PIN_Code ?? 'Unknown'}</div>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 5, color: '#94a3b8', fontSize: 11 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16 }}><span>Office</span><span style={{ color: '#e2e8f0', textAlign: 'right' }}>{props.Office_Name ?? '--'}</span></div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16 }}><span>Type</span><span style={{ color: '#e2e8f0' }}>{props.Office_Type ?? '--'}</span></div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16 }}><span>Division</span><span style={{ color: '#e2e8f0', textAlign: 'right' }}>{props.Division_Name ?? '--'}</span></div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16 }}><span>Region</span><span style={{ color: '#e2e8f0' }}>{props.Region_Name ?? '--'}</span></div>
     </div>
   </>);
 }

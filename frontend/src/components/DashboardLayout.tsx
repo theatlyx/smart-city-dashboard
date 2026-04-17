@@ -20,7 +20,7 @@ function fmt(timeStr: string) {
 const tip = { backgroundColor: '#0f172a', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 8, fontSize: 11 };
 
 export default function DashboardLayout({ solarCoords, onCloseSolar }: { solarCoords: any, onCloseSolar: () => void }) {
-  const { city, setCity, selectedLocation, timeOfDay, setTimeOfDay } = useCityContext();
+  const { city, setCity, selectedLocation, timeOfDay, setTimeOfDay, activeLayer, setActiveLayer } = useCityContext();
   const [weather, setWeather] = useState<any>(null);
   const [airQuality, setAirQuality] = useState<any>(null);
   const [cityBikes, setCityBikes] = useState<any>(null);
@@ -89,6 +89,22 @@ export default function DashboardLayout({ solarCoords, onCloseSolar }: { solarCo
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 12 }}>
+          {/* Layer Switcher */}
+          {city.pincodeUrl && (
+            <div style={{ display: 'flex', alignItems: 'center', background: 'rgba(30,41,59,0.8)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 20, padding: 3, gap: 4 }}>
+              <button 
+                onClick={() => setActiveLayer('buildings')}
+                style={{ padding: '4px 10px', borderRadius: 16, border: 'none', background: activeLayer === 'buildings' ? 'rgba(0,210,255,0.2)' : 'transparent', color: activeLayer === 'buildings' ? '#00d2ff' : '#94a3b8', fontSize: 11, fontWeight: 600, cursor: 'pointer' }}>
+                3D Buildings
+              </button>
+              <button 
+                onClick={() => setActiveLayer('demographics')}
+                style={{ padding: '4px 10px', borderRadius: 16, border: 'none', background: activeLayer === 'demographics' ? 'rgba(167,139,250,0.2)' : 'transparent', color: activeLayer === 'demographics' ? '#a78bfa' : '#94a3b8', fontSize: 11, fontWeight: 600, cursor: 'pointer' }}>
+                Zoning View
+              </button>
+            </div>
+          )}
+
           {/* City Switcher */}
           <div style={{ position: 'relative' }}>
             <button onClick={() => setCityDropdown(d => !d)} style={{ display: 'flex', alignItems: 'center', gap: 6, background: 'rgba(51,65,85,0.8)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 20, padding: '5px 14px', color: '#e2e8f0', cursor: 'pointer', fontSize: 12, fontWeight: 600 }}>

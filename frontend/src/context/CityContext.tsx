@@ -14,6 +14,7 @@ export interface CityConfig {
   buildings: 'geojson' | '3d-tiles';
   tilesUrl?: string;
   geojsonUrl?: string;
+  pincodeUrl?: string;
   features: string[];
   timezone: string;
 }
@@ -44,6 +45,7 @@ export const CITIES: Record<string, CityConfig> = {
     bearing: 10,
     buildings: 'geojson',
     geojsonUrl: '/buildings_ahmedabad.json',
+    pincodeUrl: '/ahmedabad_pincodes.json',
     features: ['weather', 'air-quality', 'openaq'],
     timezone: 'Asia/Kolkata',
   },
@@ -64,6 +66,8 @@ interface CityContextValue {
   setSelectedLocation: (loc: SelectedLocation) => void;
   timeOfDay: number;
   setTimeOfDay: (t: number) => void;
+  activeLayer: 'buildings' | 'demographics';
+  setActiveLayer: (layer: 'buildings' | 'demographics') => void;
 }
 
 const CityContext = createContext<CityContextValue | null>(null);
@@ -77,6 +81,7 @@ export function CityProvider({ children }: { children: ReactNode }) {
   });
   
   const [timeOfDay, setTimeOfDay] = useState<number>(new Date().getHours() + new Date().getMinutes() / 60);
+  const [activeLayer, setActiveLayer] = useState<'buildings' | 'demographics'>('buildings');
 
   const setCity = useCallback((id: string) => {
     if (CITIES[id]) {
@@ -87,7 +92,7 @@ export function CityProvider({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <CityContext.Provider value={{ city: CITIES[cityId], setCity, selectedLocation, setSelectedLocation, timeOfDay, setTimeOfDay }}>
+    <CityContext.Provider value={{ city: CITIES[cityId], setCity, selectedLocation, setSelectedLocation, timeOfDay, setTimeOfDay, activeLayer, setActiveLayer }}>
       {children}
     </CityContext.Provider>
   );
