@@ -74,8 +74,8 @@ The dashboard includes a Time Travel slider that calculates the exact geographic
 Moving beyond real-time API data, the Digital Twin features heavily optimized pipelines to process massive governmental datasets into interactive layers:
 
 <p align="center">
-  <img src="frontend/public/screenshots/zoning_view.jpg" width="48%" />
-  <img src="frontend/public/screenshots/groundwater_view.jpg" width="48%" />
+  <img src="frontend/public/screenshots/ahmedabad_zoning_view.png" width="48%" />
+  <img src="frontend/public/screenshots/ground_water_level_ahmedabad.png" width="48%" />
 </p>
 *Left: Administrative Zoning View. Right: Historical Groundwater Depletion Choropleth.*
 
