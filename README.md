@@ -42,6 +42,9 @@ Currently configured with digital twins for:
 | Feature | Description | Source |
 |---------|-------------|--------|
 | 🏙️ **Multi-City Architecture** | Switch seamlessly between cities with different API layers and 3D rendering modes (3D Tiles vs. GeoJSON extrusion). | - |
+| 🏗️ **LOD1 3D Buildings** | High-fidelity 3D building extrusions for Ahmedabad using real-world height and level data from OpenStreetMap. | OSM |
+| 🏷️ **Dynamic Tag Editor** | Seamlessly add, edit, and delete arbitrary OpenStreetMap tags (like `building:colour`, `historic=yes`, etc.) directly from the dashboard UI with native color-pickers, acting as a local database for your Digital Twin. | OSM Synergy |
+| 🚇 **High-Fidelity Transit** | Complete visualization of Ahmedabad Metro (Phase 1 & 2), BRTS hubs, and city-wide Bus networks with ground-truth coordinates. | Gmaps KML |
 | 🌡️ **Hyper-Local Climate** | Click anywhere on the 3D map to fetch exact weather and air quality for that specific latitude/longitude. | Open-Meteo |
 | ✈️ **Live Aviation Tracking** | Real-time aircraft positions, altitudes, velocities, and headings overhead. | OpenSky Network |
 | ☀️ **Solar Potential Engine** | Click on any building to calculate its estimated annual solar generation (kWh/yr) using satellite irradiance data. | PVGIS (EU) |
@@ -49,6 +52,7 @@ Currently configured with digital twins for:
 | 💧 **Historical Groundwater** | 26-year historical groundwater analysis (2000-2026). Visually maps depletion/rising hotspots across administrative boundaries with interactive time-series charts. | CGWB |
 | 🚲 **Mobility Networks** | Live monitoring of city bike networks (capacities, empty docks) rendered directly on the map. | CityBik.es |
 | 📡 **CPCB Sensor Networks** | Real-time air quality index monitoring from physical stations across Indian cities. | OpenAQ |
+| 🤖 **AI Urban Consultant** | Integrated AI analysis panel to provide urban planning insights and environmental assessments. | Google Gemini |
 | 🚦 **Automated Alerts** | Dynamic UI that flags empty bike stations, hazardous AQI events, and more based on the active city. | - |
 
 ---
@@ -127,6 +131,13 @@ cd frontend
 npm install
 npm run dev
 ```
+
+### 3. Fetch Building Data (Optional)
+If a city uses GeoJSON for buildings (like Ahmedabad), you can fetch LOD1 data using the provided script:
+```bash
+python backend/scripts/fetch_ahmedabad_buildings.py
+```
+This will generate `buildings_ahmedabad.json` in the `frontend/public` directory.
 
 Open `http://localhost:5173` in your browser.
 

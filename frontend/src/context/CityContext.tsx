@@ -17,8 +17,13 @@ export interface CityConfig {
   geojsonUrl?: string;
   pincodeUrl?: string;
   groundwaterUrl?: string;
+  landcoverUrl?: string;
   features: string[];
   timezone: string;
+  // Meta
+  population?: string;
+  area?: string;
+  status?: 'NOMINAL' | 'MAINTENANCE' | 'ALERT';
 }
 
 export const CITIES: Record<string, CityConfig> = {
@@ -35,6 +40,9 @@ export const CITIES: Record<string, CityConfig> = {
     tilesUrl: 'https://kartta.hel.fi/3d/mesh/Helsinki_2024/tileset.json',
     features: ['weather', 'air-quality', 'city-bikes'],
     timezone: 'Europe/Helsinki',
+    population: '658,864',
+    area: '213.8 km²',
+    status: 'NOMINAL',
   },
   ahmedabad: {
     id: 'ahmedabad',
@@ -46,11 +54,15 @@ export const CITIES: Record<string, CityConfig> = {
     pitch: 50,
     bearing: 10,
     buildings: 'geojson',
-    geojsonUrl: '/buildings_ahmedabad.json',
+    geojsonUrl: '/buildings_lod1_enriched.json',
     pincodeUrl: '/ahmedabad_pincodes.json',
     groundwaterUrl: '/ahmedabad_groundwater_zones.json',
+    landcoverUrl: '/landcover_ahmedabad.json',
     features: ['weather', 'air-quality', 'openaq'],
     timezone: 'Asia/Kolkata',
+    population: '8,253,000',
+    area: '464 km²',
+    status: 'NOMINAL',
   },
 };
 
@@ -62,29 +74,31 @@ interface SelectedLocation {
   label?: string;
 }
 
+export type ActiveLayer = 'buildings' | 'demographics' | 'groundwater' | 'landcover' | 'metro' | 'brts' | 'bus';
+
 interface CityContextValue {
   city: CityConfig;
   setCity: (id: string) => void;
   selectedLocation: SelectedLocation;
   setSelectedLocation: (loc: SelectedLocation) => void;
-  timeOfDay: number;
-  setTimeOfDay: (t: number) => void;
-  activeLayer: 'buildings' | 'demographics' | 'groundwater';
-  setActiveLayer: (layer: 'buildings' | 'demographics' | 'groundwater') => void;
+  activeLayer: ActiveLayer;
+  setActiveLayer: (layer: ActiveLayer) => void;
+  viewMode: '2D' | '3D';
+  setViewMode: (m: '2D' | '3D') => void;
 }
 
 const CityContext = createContext<CityContextValue | null>(null);
 
 export function CityProvider({ children }: { children: ReactNode }) {
-  const [cityId, setCityId] = useState<string>('helsinki');
+  const [cityId, setCityId] = useState<string>('ahmedabad');
   const [selectedLocation, setSelectedLocation] = useState<SelectedLocation>({
-    lat: 60.1699,
-    lon: 24.9384,
-    label: 'Helsinki City Center',
+    lat: 23.0225,
+    lon: 72.5714,
+    label: 'Ahmedabad City Center',
   });
   
-  const [timeOfDay, setTimeOfDay] = useState<number>(new Date().getHours() + new Date().getMinutes() / 60);
-  const [activeLayer, setActiveLayer] = useState<'buildings' | 'demographics' | 'groundwater'>('buildings');
+  const [activeLayer, setActiveLayer] = useState<ActiveLayer>('buildings');
+  const [viewMode, setViewMode] = useState<'2D' | '3D'>('3D');
 
   const setCity = useCallback((id: string) => {
     if (CITIES[id]) {
@@ -95,7 +109,7 @@ export function CityProvider({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <CityContext.Provider value={{ city: CITIES[cityId], setCity, selectedLocation, setSelectedLocation, timeOfDay, setTimeOfDay, activeLayer, setActiveLayer }}>
+    <CityContext.Provider value={{ city: CITIES[cityId], setCity, selectedLocation, setSelectedLocation, activeLayer, setActiveLayer, viewMode, setViewMode }}>
       {children}
     </CityContext.Provider>
   );
