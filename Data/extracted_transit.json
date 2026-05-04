@@ -1,0 +1,284 @@
+{
+  "metro": [
+    {
+      "name": "APMC",
+      "position": [
+        72.53719816,
+        22.99763682
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Motera Stadium",
+      "position": [
+        72.59652634,
+        23.09656584
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Sabarmati",
+      "position": [
+        72.592266,
+        23.08546412
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Ranip",
+      "position": [
+        72.57394574,
+        23.06769132
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Shreyas",
+      "position": [
+        72.54910348000001,
+        23.01353218
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Rajiv Nagar",
+      "position": [
+        72.53661958,
+        23.00969054
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Jivraj Park",
+      "position": [
+        72.53353246,
+        23.005376140000003
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Gandhigram",
+      "position": [
+        72.56901395999999,
+        23.02687845333333
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Stadium",
+      "position": [
+        72.56153874,
+        23.03983376
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Commerce Sixth Road",
+      "position": [
+        72.55284564,
+        23.04075212
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Gurukul Road",
+      "position": [
+        72.53473468,
+        23.04590188
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Doordarshan Kendra",
+      "position": [
+        72.52428218,
+        23.0481822
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Thaltej",
+      "position": [
+        72.51572795,
+        23.04970935
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "AEC",
+      "position": [
+        72.59311577999999,
+        23.07496226
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Vadaj",
+      "position": [
+        72.56562076,
+        23.0676861
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Vijay Nagar",
+      "position": [
+        72.56228758,
+        23.056310200000002
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Usmanpura",
+      "position": [
+        72.56492970000001,
+        23.04595578
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Gujarat University Station",
+      "position": [
+        72.54336053333334,
+        23.04487875
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Old High Court",
+      "position": [
+        72.56699311538462,
+        23.037483315384616
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Vastral Gam",
+      "position": [
+        72.66725122,
+        22.9971742
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Nirant Cross Roads",
+      "position": [
+        72.65874837999999,
+        22.99976264
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Vastral",
+      "position": [
+        72.64745458,
+        23.00361286
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Rabari Colony",
+      "position": [
+        72.63526862,
+        23.0054993
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Amraiwadi",
+      "position": [
+        72.62859238,
+        23.00770356
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Apparel Park",
+      "position": [
+        72.61786798,
+        23.01063986
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Paldi",
+      "position": [
+        72.5622917,
+        23.018458633333335
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Koba Circle",
+      "position": [
+        72.63094168,
+        23.13219094
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Narmada Canal",
+      "position": [
+        72.6219325,
+        23.1250243
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Tapovan Circle",
+      "position": [
+        72.6157125,
+        23.12007602
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Vishwakarma College",
+      "position": [
+        72.60826399999999,
+        23.11413956
+      ],
+      "type": "metro",
+      "line": "red"
+    },
+    {
+      "name": "Koteshwar Road",
+      "position": [
+        72.60206328000001,
+        23.10302994
+      ],
+      "type": "metro",
+      "line": "red"
+    }
+  ],
+  "brts": []
+}

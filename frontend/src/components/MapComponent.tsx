@@ -1,19 +1,19 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import DeckGL from '@deck.gl/react';
 import { GeoJsonLayer, ScatterplotLayer, TextLayer } from '@deck.gl/layers';
-import { AmbientLight, _SunLight as SunLight, LightingEffect, DirectionalLight } from '@deck.gl/core';
+import { AmbientLight, _SunLight as SunLight, LightingEffect, DirectionalLight, LinearInterpolator } from '@deck.gl/core';
 import { Tile3DLayer } from '@deck.gl/geo-layers';
 import { Tiles3DLoader } from '@loaders.gl/3d-tiles';
 import { Map } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { useCityContext } from '../context/CityContext';
 import { LineChart, Line, XAxis, YAxis, Tooltip as RechartsTooltip, ResponsiveContainer } from 'recharts';
-import { Bike, Plane, Radio, Map as MapIcon, Info, Droplets, Activity, Zap, Sun, X, Video, RefreshCw } from 'lucide-react';
+import { Bike, Plane, Radio, Map as MapIcon, Info, Droplets, Activity, Zap, Sun, X, Video, RefreshCw, Edit3, Save, ChevronRight, Database, Plus, Trash2 } from 'lucide-react';
 import { PathLayer } from '@deck.gl/layers';
 import { PathStyleExtension } from '@deck.gl/extensions';
 
 const MAP_STYLE = 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json';
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000';
+const API_BASE = 'http://127.0.0.1:8000';
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 interface BikeStation { id: string; name: string; latitude: number; longitude: number; free_bikes: number; empty_slots: number; total_slots: number; }
@@ -35,7 +35,7 @@ function cityBBox(lat: number, lon: number, deg = 0.6) {
 }
 
 export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat: number, lon: number) => void }) {
-  const { city, setSelectedLocation, timeOfDay, activeLayer } = useCityContext();
+  const { city, setSelectedLocation, activeLayer, viewMode } = useCityContext();
   const [bikeStations, setBikeStations] = useState<BikeStation[]>([]);
   const [aqStations, setAqStations] = useState<AQStation[]>([]);
   const [aircraft, setAircraft] = useState<Aircraft[]>([]);
@@ -44,11 +44,61 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
   const [hoverInfo, setHoverInfo] = useState<MapInfo | null>(null);
   const [clickInfo, setClickInfo] = useState<MapInfo | null>(null);
   const [isOrbiting, setIsOrbiting] = useState(false);
+  const [enrichedData, setEnrichedData] = useState<any>(null);
+  const [isLoadingEnrichment, setIsLoadingEnrichment] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+  const [geojsonVersion, setGeojsonVersion] = useState(0);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [hifiCount, setHifiCount] = useState(0);
+
+
+  const handleBuildingUpdate = async (updates: any) => {
+    if (!clickInfo?.data) return;
+    const osm_id = clickInfo.data['@id'] || clickInfo.data.osm_id;
+    
+    const finalizedUpdates = { 
+      ...updates, 
+      "verified:hifi": "yes",
+      "building:levels": updates.levels?.toString(),
+      "building:colour": updates["building:colour"] || updates.color,
+      "height": (updates.levels * 3.5).toString()
+    };
+    
+    try {
+      const response = await fetch(`${API_BASE}/api/buildings/update`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ osm_id, updates: finalizedUpdates })
+      });
+      
+      if (response.ok) {
+        setGeojsonVersion(v => v + 1);
+        setIsEditing(false);
+        setSuccessMessage("Mesh Synchronized Successfully");
+        setErrorMessage(null);
+        setTimeout(() => setSuccessMessage(null), 3000);
+
+        setClickInfo(prev => prev ? {
+          ...prev,
+          data: { ...prev.data, ...finalizedUpdates }
+        } : null);
+      } else {
+        setErrorMessage("Bake Failed: Server Rejected Sync");
+        setTimeout(() => setErrorMessage(null), 4000);
+      }
+    } catch (error) {
+      setErrorMessage("Network Error: Backend Unreachable");
+      setTimeout(() => setErrorMessage(null), 4000);
+      console.error('Failed to update building:', error);
+    }
+  };
 
   const [viewState, setViewState] = useState({
     longitude: city.lon, latitude: city.lat,
     zoom: city.zoom, pitch: city.pitch, bearing: city.bearing,
     transitionDuration: 0,
+    transitionInterpolator: new LinearInterpolator(['pitch', 'zoom'])
   });
 
   const prevCityId = useRef(city.id);
@@ -58,6 +108,15 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
       setViewState(vs => ({ ...vs, longitude: city.lon, latitude: city.lat, zoom: city.zoom, pitch: city.pitch, bearing: city.bearing, transitionDuration: 1500 }));
     }
   }, [city]);
+
+  useEffect(() => {
+    setViewState(vs => ({
+      ...vs,
+      pitch: viewMode === '3D' ? (city.pitch || 50) : 0,
+      transitionDuration: 1000,
+      transitionInterpolator: new LinearInterpolator(['pitch'])
+    }));
+  }, [viewMode, city.pitch]);
 
   useEffect(() => {
     if (!city.features.includes('city-bikes')) { setBikeStations([]); return; }
@@ -101,6 +160,93 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
       setLandcover(null);
     }
   }, [city.landcoverUrl]);
+
+  useEffect(() => {
+    if (city.geojsonUrl) {
+      // Append version to bypass cache
+      fetch(`${city.geojsonUrl}?v=${geojsonVersion}`)
+        .then(r => r.json())
+        .then(data => {
+          if (data.features) {
+            const count = data.features.filter((f: any) => f.properties?.['verified:hifi'] === 'yes').length;
+            setHifiCount(count);
+          }
+        })
+        .catch(console.error);
+    }
+  }, [city.geojsonUrl, geojsonVersion]);
+
+  // ── Geocoding Enrichment Logic ───────────────────────────────────────────────
+  useEffect(() => {
+    if (!clickInfo) {
+      setEnrichedData(null);
+      return;
+    }
+
+    const fetchEnrichment = async () => {
+      // 1. LOCAL-FIRST CHECK: If data is already in our local GeoJSON, skip API call
+      const props = clickInfo.data;
+      if (props && (props.name || props['addr:full'] || props['addr:street'] || props['verified:hifi'] === 'yes')) {
+        setEnrichedData({
+          display_name: props['addr:full'] || props.name || "Locally Verified Asset",
+          address: {
+            road: props['addr:street'] || "",
+            suburb: props['addr:suburb'] || "",
+            city: props['addr:city'] || "Ahmedabad"
+          }
+        });
+        setIsLoadingEnrichment(false);
+        return;
+      }
+
+      setIsLoadingEnrichment(true);
+      try {
+        const apiKey = import.meta.env.VITE_GEOCODE_API_KEY;
+        if (!apiKey) return;
+
+        const osmId = clickInfo.data['@id'] || clickInfo.data.osm_id;
+        const [lon, lat] = clickInfo.coordinate || [0, 0];
+        
+        const requests: Promise<any>[] = [];
+        
+        // 1. Always attempt reverse geocode for address hierarchy (LatLong)
+        if (lat && lon) {
+          requests.push(fetch(`https://geocode.maps.co/reverse?lat=${lat}&lon=${lon}&api_key=${apiKey}`).then(r => r.json()));
+        }
+        
+        // 2. Attempt OSM ID lookup for specific building tags if available
+        if (osmId) {
+          let formattedId = osmId.toString();
+          if (formattedId.includes('/')) {
+            const [type, id] = formattedId.split('/');
+            formattedId = `${type.charAt(0).toUpperCase()}${id}`;
+          }
+          requests.push(fetch(`https://geocode.maps.co/lookup?osm_ids=${formattedId}&api_key=${apiKey}`).then(r => r.json()));
+        }
+
+        const responses = await Promise.allSettled(requests);
+        let merged: any = {};
+        
+        responses.forEach((res) => {
+          if (res.status === 'fulfilled' && res.value) {
+            const data = Array.isArray(res.value) ? res.value[0] : res.value;
+            // Merge data: Lookup (specific building) values overwrite Reverse (nearest point) values
+            merged = { ...merged, ...data };
+          }
+        });
+
+        if (Object.keys(merged).length > 0) {
+          setEnrichedData(merged);
+        }
+      } catch (error) {
+        console.error('Enrichment failed:', error);
+      } finally {
+        setIsLoadingEnrichment(false);
+      }
+    };
+
+    fetchEnrichment();
+  }, [clickInfo]);
 
   // Cinematic Orbit Logic
   const orbitFrameRef = useRef<number>(0);
@@ -267,7 +413,8 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
   }, [city]);
 
   const handleMapClick = useCallback((info: { coordinate?: number[] | null, object?: any, x?: number, y?: number }) => {
-    if (!info.coordinate || info.x === undefined || info.y === undefined) {
+    // Only allow selection on valid objects (Buildings, Bus, etc.)
+    if (!info.object || !info.coordinate || info.x === undefined || info.y === undefined) {
       setClickInfo(null);
       return;
     }
@@ -292,7 +439,11 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
       x: info.x, 
       y: info.y, 
       type, 
-      data: info.object?.properties || info.object || {},
+      data: {
+        ...(info.object?.properties || info.object || {}),
+        osm_id: info.object?.id || info.object?.properties?.['@id'] || info.object?.properties?.osm_id || info.object?.osm_id,
+        '@id': info.object?.id || info.object?.properties?.['@id']
+      },
       coordinate: [roundedLon, roundedLat]
     });
   }, []);
@@ -300,36 +451,59 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
   const layers = useMemo(() => {
     const layers_to_render: any[] = [];
 
+    const geojsonUrl = `${city.geojsonUrl}?v=${geojsonVersion}`;
+
     if (activeLayer === 'buildings') {
       if (city.buildings === '3d-tiles' && city.tilesUrl) {
         (layers_to_render as any).push(new Tile3DLayer({ id: 'reality-mesh', data: city.tilesUrl, loader: Tiles3DLoader, pickable: false }));
       } else if (city.buildings === 'geojson' && city.geojsonUrl) {
+        // 1. Building Base (Walls & Massing)
         const buildingsLayer = new (GeoJsonLayer as any)({
-          id: 'buildings-geojson', 
-          data: city.geojsonUrl, 
-          extruded: true,
+          id: 'buildings-walls', 
+          data: geojsonUrl, 
+          extruded: viewMode === '3D',
           wireframe: true,
           getElevation: (f: any) => {
-            const h = f.properties?.height ?? f.properties?.['building:height'];
-            if (h) return parseFloat(h);
-            const l = f.properties?.['building:levels'] ?? f.properties?.levels;
-            if (l) return parseFloat(l) * 3.5;
-            return 12;
+            if (viewMode === '2D') return 0;
+            const l = parseFloat(f.properties?.['building:levels'] || f.properties?.levels || '0');
+            const h = parseFloat(f.properties?.['building:height'] || f.properties?.height || '0');
+            
+            // Priority 1: Levels (if manually edited or explicitly set)
+            if (l > 0) return l * 3.5;
+            // Priority 2: Direct Height
+            if (h > 0) return h;
+            // Priority 3: Procedural Randomness for city scale
+            return (18 + ((f.properties?.['@id'] || f.id || '1').toString().split('').reduce((a:any,c:any)=>a+c.charCodeAt(0),0)%25));
           },
-          elevationScale: 1.0,
           getFillColor: (f: any): [number, number, number, number] => { 
-            const levels = parseFloat(f.properties?.['building:levels'] ?? f.properties?.levels ?? '1');
-            if (levels > 20) return [51, 65, 85, 255];  // Slate 700 (Tall)
-            if (levels > 10) return [71, 85, 105, 255]; // Slate 600 (Mid)
-            if (levels > 5) return [100, 116, 139, 255]; // Slate 500 (Low)
-            return [148, 163, 184, 255];                // Slate 400 (Base)
+             const color = f.properties?.['building:colour'] || f.properties?.color;
+             if (color) {
+               const hex = color.replace('#', '');
+               if (hex.length === 3) {
+                  const r = parseInt(hex[0]+hex[0], 16);
+                  const g = parseInt(hex[1]+hex[1], 16);
+                  const b = parseInt(hex[2]+hex[2], 16);
+                  return [r, g, b, 255];
+               }
+               const r = parseInt(hex.substring(0, 2), 16);
+               const g = parseInt(hex.substring(2, 4), 16);
+               const b = parseInt(hex.substring(4, 6), 16);
+               return [r, g, b, 255];
+             }
+
+             const type = f.properties?.type || f.properties?.building || '';
+             if (type === 'commercial' || type === 'office') return [140, 175, 230, 255]; 
+             if (type === 'residential' || type === 'apartments' || type === 'house') return [210, 215, 220, 255];
+             return [210, 215, 220, 255];
           },
-          getLineColor: [255, 255, 255, 50], 
-          lineWidthMinPixels: 0.5, 
+          getLineColor: [255, 255, 255, 40], 
+          lineWidthMinPixels: 0.5,
+          material: { ambient: 0.4, diffuse: 0.7, shininess: 80, specularColor: [255, 255, 255] },
           pickable: true,
-          autoHighlight: true,
-          highlightColor: [0, 210, 255, 120],
-          material: { ambient: 0.35, diffuse: 0.6, shininess: 32, specularColor: [150, 150, 150] },
+          updateTriggers: {
+            getElevation: [viewMode, geojsonVersion],
+            getFillColor: [geojsonVersion]
+          },
           onHover: ({ object, x, y }: any) => {
             if (object && x !== undefined && y !== undefined) {
               setHoverInfo({ type: 'building', data: object.properties, x, y });
@@ -338,7 +512,66 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
             }
           }
         });
+
+        // 2. Building Caps (LOD 2 Roofs)
+        const roofLayer = new (GeoJsonLayer as any)({
+          id: 'buildings-roofs',
+          data: geojsonUrl,
+          visible: viewMode === '3D',
+          extruded: true, 
+          getElevation: (f: any) => {
+            const l = parseFloat(f.properties?.['building:levels'] || f.properties?.levels || '0');
+            const h = parseFloat(f.properties?.['building:height'] || f.properties?.height || '0');
+            const baseH = l > 0 ? l * 3.5 : (h > 0 ? h : (18 + ((f.properties?.['@id'] || f.id || '1').toString().split('').reduce((a:any,c:any)=>a+c.charCodeAt(0),0)%25)));
+            return baseH + 0.1;
+          },
+          getFillColor: (f: any) => {
+            const rColor = f.properties?.['roof:colour'] || f.properties?.['building:colour'] || f.properties?.roofColor || f.properties?.color;
+            if (rColor) {
+               const hex = rColor.replace('#', '');
+               return [parseInt(hex.substring(0, 2), 16), parseInt(hex.substring(2, 4), 16), parseInt(hex.substring(4, 6), 16), 255];
+            }
+            const type = f.properties?.type || f.properties?.building || '';
+            if (type === 'commercial' || type === 'office') return [40, 90, 230, 255]; 
+            if (type === 'residential' || type === 'apartments' || type === 'house') return [240, 50, 40, 255]; 
+            return [160, 165, 170, 255]; 
+          },
+          parameters: {
+            depthTest: true,
+            polygonOffset: [1, 1]
+          },
+          updateTriggers: {
+            getElevation: [geojsonVersion],
+            getFillColor: [geojsonVersion]
+          },
+          pickable: false,
+        });
+
+        // 3. Procedural Windows (Floor Lines)
+        const windowLayer = new (GeoJsonLayer as any)({
+          id: 'buildings-windows',
+          data: geojsonUrl,
+          visible: viewMode === '3D',
+          getLineColor: [255, 255, 255, 150],
+          getLineWidth: 0.2,
+          lineWidthMinPixels: 0.5,
+          stroked: true,
+          filled: false,
+          wireframe: true,
+          extruded: true,
+          getElevation: (f: any) => {
+            const lStr = f.properties?.['building:levels'] || f.properties?.levels || '1';
+            const l = parseInt(lStr);
+            return l > 1 ? l * 3.5 : 3.5;
+          },
+          updateTriggers: {
+             getElevation: [geojsonVersion]
+          }
+        });
+
         (layers_to_render as any).push(buildingsLayer);
+        (layers_to_render as any).push(roofLayer);
+        (layers_to_render as any).push(windowLayer);
       }
     } else if (activeLayer === 'demographics' && city.pincodeUrl) {
       (layers_to_render as any).push(new (GeoJsonLayer as any)({
@@ -524,24 +757,29 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
     }
 
     return layers_to_render;
-  }, [city, bikeStations, aqStations, aircraft, activeLayer, groundwater, landcover, transitData, timeOfDay]);
+  }, [city, bikeStations, aqStations, aircraft, activeLayer, groundwater, landcover, transitData, viewMode]);
 
   const lightingEffect = useMemo(() => {
     const ambientLight = new AmbientLight({ color: [255, 255, 255], intensity: 1.2 });
-    const date = new Date();
-    date.setHours(Math.floor(timeOfDay), Math.floor((timeOfDay % 1) * 60), 0, 0);
+    // Soft top-down light to prevent harsh side shadows
     const sunLight = new SunLight({
-      timestamp: date.getTime(),
+      timestamp: new Date().setHours(12, 0, 0, 0),
       color: [255, 255, 255],
-      intensity: 2.5,
+      intensity: 1.0,
     });
-    const directionalLight = new DirectionalLight({
+    // Two directional lights to fill both sides of buildings
+    const keyLight = new DirectionalLight({
       color: [255, 255, 255],
-      intensity: 0.8,
-      direction: [0, 0, -1]
+      intensity: 0.6,
+      direction: [1, 1, -1]
     });
-    return new LightingEffect({ ambientLight, sunLight, directionalLight });
-  }, [timeOfDay]);
+    const fillLight = new DirectionalLight({
+      color: [200, 220, 255],
+      intensity: 0.4,
+      direction: [-1, -1, -1]
+    });
+    return new LightingEffect({ ambientLight, sunLight, keyLight, fillLight });
+  }, []);
 
   return (
     <div className="absolute inset-0 z-0">
@@ -559,6 +797,24 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
         </div>
       )}
 
+      {successMessage && (
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 z-50 bg-neon-blue/20 border border-neon-blue/40 backdrop-blur-xl px-8 py-4 rounded-2xl shadow-[0_0_50px_rgba(0,210,255,0.3)] animate-in slide-in-from-top-10 fade-in duration-500">
+          <div className="flex items-center gap-4">
+            <div className="w-2 h-2 rounded-full bg-neon-blue animate-pulse" />
+            <span className="text-white font-black uppercase tracking-widest text-xs">{successMessage}</span>
+          </div>
+        </div>
+      )}
+
+      {errorMessage && (
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 z-50 bg-red-500/20 border border-red-500/40 backdrop-blur-xl px-8 py-4 rounded-2xl shadow-[0_0_50px_rgba(239,68,68,0.3)] animate-in slide-in-from-top-10 fade-in duration-500">
+          <div className="flex items-center gap-4">
+            <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+            <span className="text-white font-black uppercase tracking-widest text-xs">{errorMessage}</span>
+          </div>
+        </div>
+      )}
+
       {clickInfo && (
         <div 
           className="absolute z-20 p-6 rounded-2xl border border-neon-blue/30 glass-panel shadow-[0_0_50px_rgba(0,210,255,0.2)] min-w-[340px] animate-in fade-in zoom-in duration-200"
@@ -569,6 +825,8 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
           </div>
           <ActionMenu 
             info={clickInfo} 
+            enrichedData={enrichedData}
+            isLoading={isLoadingEnrichment}
             onSolar={() => {
               if (!clickInfo.coordinate) return;
               const [lon, lat] = clickInfo.coordinate;
@@ -581,8 +839,18 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
               setClickInfo(null);
             }}
             isOrbiting={isOrbiting}
+            onEdit={() => setIsEditing(true)}
           />
         </div>
+      )}
+
+      {isEditing && clickInfo && (
+        <EditAssetModal 
+          data={clickInfo.data} 
+          enrichedData={enrichedData}
+          onSave={handleBuildingUpdate} 
+          onClose={() => setIsEditing(false)} 
+        />
       )}
 
       <DeckGL
@@ -598,6 +866,14 @@ export default function MapComponent({ onSolarRequest }: { onSolarRequest?: (lat
       >
         <Map mapStyle={MAP_STYLE} interactive={false} />
       </DeckGL>
+
+      {/* Hi-Fi buildings count badge */}
+      {hifiCount > 0 && (
+        <div className="absolute top-24 left-6 glass-panel px-4 py-2 rounded-full border-neon-blue/30 text-neon-blue text-[10px] font-black uppercase tracking-widest flex items-center gap-3 shadow-[0_0_15px_rgba(0,210,255,0.3)] animate-in fade-in duration-500">
+          <span className="w-2 h-2 bg-neon-blue rounded-full pulse-glow" />
+          {hifiCount} High-Fi Building{hifiCount === 1 ? '' : 's'} Verified
+        </div>
+      )}
 
       {/* Aircraft count badge */}
       {aircraft.filter(a => !a.on_ground).length > 0 && (
@@ -763,7 +1039,7 @@ function GroundwaterTooltip({ data }: { data: any }) {
 
       <div className="h-28 w-full mt-2">
         <div className="text-[9px] text-slate-600 font-black uppercase tracking-widest mb-3 text-center">Historical Aquifer Saturation Trend</div>
-        <ResponsiveContainer width="100%" height="100%" minWidth={0}>
+        <ResponsiveContainer width="100%" height="100%" minWidth={0} aspect={2.5}>
           <LineChart data={data.gw_history ?? []}>
             <XAxis dataKey="date" hide />
             <YAxis hide reversed />
@@ -799,11 +1075,11 @@ function BuildingTooltip({ data }: { data: any }) {
       <div className="grid grid-cols-2 gap-3">
         <div className="bg-white/5 rounded-xl p-3 border border-white/5">
           <div className="text-[8px] text-slate-500 font-black uppercase mb-1 tracking-widest">Elevation</div>
-          <div className="text-xl font-black text-white leading-none">{(data.height || 0).toFixed(1)}<span className="text-[10px] text-slate-500 ml-1">m</span></div>
+          <div className="text-xl font-black text-white leading-none">{(parseFloat(data.height) || 0).toFixed(1)}<span className="text-[10px] text-slate-500 ml-1">m</span></div>
         </div>
         <div className="bg-white/5 rounded-xl p-3 border border-white/5">
           <div className="text-[8px] text-slate-500 font-black uppercase mb-1 tracking-widest">Building Type</div>
-          <div className="text-xl font-black text-white leading-none truncate uppercase text-[10px]">{data.type || 'N/A'}</div>
+          <div className="text-xl font-black text-white leading-none truncate uppercase text-[10px]">{data.type || data.building || 'N/A'}</div>
         </div>
       </div>
 
@@ -815,9 +1091,19 @@ function BuildingTooltip({ data }: { data: any }) {
   );
 }
 
-function ActionMenu({ info, onSolar, onOrbit, isOrbiting }: { info: MapInfo, onSolar: () => void, onOrbit: () => void, isOrbiting: boolean }) {
+function ActionMenu({ info, enrichedData, isLoading, onSolar, onOrbit, isOrbiting, onEdit }: { info: MapInfo, enrichedData: any, isLoading: boolean, onSolar: () => void, onOrbit: () => void, isOrbiting: boolean, onEdit: () => void }) {
   const isBuilding = info.type === 'building';
   
+  const getDisplayTitle = () => {
+    if (info.data.name) return info.data.name;
+    if (enrichedData?.address) {
+      const addr = enrichedData.address;
+      // Priority: tourism > amenity > office > shop > residential area
+      return addr.tourism || addr.amenity || addr.office || addr.shop || addr.residential || addr.neighbourhood || addr.suburb || enrichedData.display_name?.split(',')[0];
+    }
+    return 'Structural Entity';
+  };
+
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-3">
@@ -826,28 +1112,107 @@ function ActionMenu({ info, onSolar, onOrbit, isOrbiting }: { info: MapInfo, onS
         </div>
         <div>
           <div className="font-black text-white tracking-tight uppercase text-sm">
-            {isBuilding ? (info.data.name || 'Structural Entity') : 'Geo-Spatial Coordinate'}
+            {isBuilding ? getDisplayTitle() : 'Geo-Spatial Coordinate'}
           </div>
           <div className="text-[10px] text-slate-500 font-black uppercase tracking-widest">
-            {isBuilding ? `Asset ID: ${info.data.id || 'N/A'}` : `LAT: ${info.coordinate?.[1]?.toFixed(5) || '0'} | LON: ${info.coordinate?.[0]?.toFixed(5) || '0'}`}
+            {isBuilding ? `Asset ID: ${info.data['@id'] || info.data.id || 'N/A'}` : `LAT: ${info.coordinate?.[1]?.toFixed(5) || '0'} | LON: ${info.coordinate?.[0]?.toFixed(5) || '0'}`}
           </div>
         </div>
       </div>
 
-      <div className="space-y-2">
+      {isLoading && (
+        <div className="flex items-center gap-2 text-[9px] text-neon-blue font-black uppercase mb-4 animate-pulse">
+          <RefreshCw size={12} className="animate-spin" /> Resolving Hyper-Local Data...
+        </div>
+      )}
+
+      {enrichedData && (
+        <div className="mb-6 p-4 bg-white/5 border border-white/10 rounded-xl animate-in fade-in slide-in-from-top-1 duration-300">
+          <div className="text-[8px] text-slate-500 font-black uppercase tracking-widest mb-2 flex items-center gap-2">
+            <Info size={10} className="text-neon-blue" />
+            Verified Address Details
+          </div>
+          <div className="text-[11px] text-slate-300 font-medium leading-relaxed tracking-tight">
+            {enrichedData.display_name}
+          </div>
+          {enrichedData.address && (
+            <div className="mt-2 flex flex-wrap gap-2">
+              {['suburb', 'city', 'postcode'].map(key => enrichedData.address[key] && (
+                <span key={key} className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[8px] text-slate-500 font-black uppercase">
+                  {enrichedData.address[key]}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      <div className="space-y-3">
         {isBuilding && (
-          <div className="bg-white/5 border border-white/10 rounded-xl p-4 mb-4">
-             <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <div className="text-[8px] text-slate-500 font-black uppercase tracking-widest mb-1">Height</div>
-                   <div className="text-lg font-black text-white">{(info.data.height || 0).toFixed(1)}m</div>
+          <div className="grid grid-cols-2 gap-3 mb-4">
+             <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                <div className="text-[8px] text-slate-500 font-black uppercase tracking-widest mb-1 flex items-center gap-1">
+                  <Activity size={10} className="text-neon-blue" /> Elevation
                 </div>
-                <div>
-                  <div className="text-[8px] text-slate-500 font-black uppercase tracking-widest mb-1">Function</div>
-                  <div className="text-lg font-black text-white truncate text-sm uppercase">{info.data.type || 'N/A'}</div>
+                <div className="text-sm font-black text-white">
+                  {(parseFloat(info.data['building:levels'] || info.data.levels || '1') * 3.5).toFixed(1)}m
+                </div>
+                <div className="text-[9px] text-slate-600 font-bold uppercase">
+                  {info.data['building:levels'] || info.data.levels || 1} Floors
+                </div>
+             </div>
+             <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                <div className="text-[8px] text-slate-500 font-black uppercase tracking-widest mb-1 flex items-center gap-1">
+                  <MapIcon size={10} className="text-neon-purple" /> Material
+                </div>
+                <div className="text-sm font-black text-white uppercase truncate">
+                  {info.data['building:material'] || info.data.material || 'Concrete'}
+                </div>
+                <div className="text-[9px] font-bold uppercase truncate" style={{ color: info.data['building:colour'] || info.data.color || '#D2D7DC' }}>
+                  {info.data['building:colour'] || info.data.color || '#D2D7DC'}
+                </div>
+             </div>
+             <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                <div className="text-[8px] text-slate-500 font-black uppercase tracking-widest mb-1 flex items-center gap-1">
+                  <Sun size={10} className="text-neon-yellow" /> Roof Spec
+                </div>
+                <div className="text-sm font-black text-white uppercase">
+                  {info.data['roof:shape'] || info.data.roofShape || 'Flat'}
+                </div>
+                <div className="text-[9px] text-slate-600 font-bold uppercase">
+                  {info.data['roof:material'] || info.data.roofMaterial || 'Concrete'}
+                </div>
+             </div>
+             <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                <div className="text-[8px] text-slate-500 font-black uppercase tracking-widest mb-1 flex items-center gap-1">
+                  <Activity size={10} className={info.data['verified:hifi'] === 'yes' ? "text-neon-green" : "text-neon-blue"} /> Status
+                </div>
+                <div className={`text-sm font-black uppercase ${info.data['verified:hifi'] === 'yes' ? "text-neon-green" : "text-white"}`}>
+                  {info.data['verified:hifi'] === 'yes' ? "Hi-Fi Verified" : "Nominal"}
+                </div>
+                <div className="text-[9px] text-slate-600 font-bold uppercase">
+                  {info.data['verified:hifi'] === 'yes' ? "Verified Mesh" : "Standard OSM"}
                 </div>
              </div>
           </div>
+        )}
+
+        {isBuilding && (
+          <button 
+            className="w-full flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-neon-blue/40 transition-all group mb-4"
+            onClick={onEdit}
+          >
+            <div className="flex items-center gap-3">
+              <div className="p-2 rounded-lg bg-slate-500/10 text-slate-400 group-hover:text-neon-blue transition-colors">
+                <Edit3 size={18} />
+              </div>
+              <div className="text-left">
+                <div className="text-[11px] font-black text-white uppercase tracking-tight">Enhance Metadata</div>
+                <div className="text-[9px] text-slate-500 font-bold uppercase">Update Levels & Type</div>
+              </div>
+            </div>
+            <ChevronRight size={14} className="text-slate-600 group-hover:text-neon-blue transition-colors" />
+          </button>
         )}
 
         <button 
@@ -876,7 +1241,7 @@ function ActionMenu({ info, onSolar, onOrbit, isOrbiting }: { info: MapInfo, onS
               <Video size={18} />
             </div>
             <div className="text-left">
-              <div className="text-[11px] font-black text-white uppercase tracking-tight">Drone Mode</div>
+          <div className="text-[11px] font-black text-white uppercase tracking-tight">Drone Mode</div>
               <div className="text-[9px] text-slate-500 font-bold uppercase">{isOrbiting ? 'Deactivate Orbit' : 'Cinematic Inspection'}</div>
             </div>
           </div>
@@ -888,6 +1253,204 @@ function ActionMenu({ info, onSolar, onOrbit, isOrbiting }: { info: MapInfo, onS
         <div className="text-[8px] text-slate-600 font-black uppercase tracking-[0.3em] text-center flex items-center justify-center gap-2">
            <span className="w-1 h-1 bg-neon-green rounded-full animate-pulse" />
            SCANNING ACTIVE SELECTION
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function EditAssetModal({ data, enrichedData, onSave, onClose }: { data: any, enrichedData: any, onSave: (updates: any) => void, onClose: () => void }) {
+  const initialTags = useMemo(() => {
+    const skip = ['id', '@id', 'osm_id'];
+    const t: {key: string, value: string}[] = [];
+    
+    // Base OSM tags from geometry data
+    for (const [k, v] of Object.entries(data)) {
+      if (!skip.includes(k) && typeof v === 'string' && v.trim() !== '') {
+        t.push({ key: k, value: v });
+      } else if (typeof v === 'number') {
+        t.push({ key: k, value: String(v) });
+      }
+    }
+
+    // Include some useful data from enriched address if missing
+    if (enrichedData?.address) {
+      if (!t.find(x => x.key === 'addr:city') && enrichedData.address.city) t.push({ key: 'addr:city', value: enrichedData.address.city });
+      if (!t.find(x => x.key === 'addr:postcode') && enrichedData.address.postcode) t.push({ key: 'addr:postcode', value: enrichedData.address.postcode });
+      if (!t.find(x => x.key === 'addr:street') && enrichedData.address.road) t.push({ key: 'addr:street', value: enrichedData.address.road });
+    }
+
+    return t.sort((a, b) => a.key.localeCompare(b.key));
+  }, [data, enrichedData]);
+
+  const [tags, setTags] = useState<{key: string, value: string}[]>(initialTags);
+  const [newKey, setNewKey] = useState('');
+  const [newVal, setNewVal] = useState('');
+  const [isSaving, setIsSaving] = useState(false);
+
+  const handleSync = async () => {
+    console.log("Starting Hi-Fi Mesh Bake for asset:", data['@id'] || data.osm_id || data.id);
+    try {
+      setIsSaving(true);
+      const updates: any = {};
+      
+      // Update all tags
+      tags.forEach(t => {
+        if (t.key.trim()) {
+          updates[t.key.trim()] = t.value.trim();
+        }
+      });
+      
+      // Mark removed tags as empty string so backend deletes them
+      initialTags.forEach(t => {
+        if (!tags.find(nt => nt.key === t.key)) {
+          updates[t.key] = "";
+        }
+      });
+
+      await onSave(updates);
+    } catch (err: any) {
+      console.error("Sync Error:", err);
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  const copyOSMTags = () => {
+    const lines = tags
+      .filter(t => t.key.trim() && t.value.trim())
+      .map(t => `${t.key.trim()}=${t.value.trim()}`)
+      .join('\n');
+    navigator.clipboard.writeText(lines);
+    alert('Full OSM Tag-Set copied to clipboard!');
+  };
+
+  const updateTag = (index: number, field: 'key' | 'value', val: string) => {
+    const newTags = [...tags];
+    newTags[index][field] = val;
+    setTags(newTags);
+  };
+
+  const removeTag = (index: number) => {
+    setTags(tags.filter((_, i) => i !== index));
+  };
+
+  const addTag = () => {
+    if (newKey.trim()) {
+      if (tags.find(t => t.key === newKey.trim())) {
+        alert('Tag already exists! Edit it below instead.');
+        return;
+      }
+      setTags([{ key: newKey.trim(), value: newVal.trim() }, ...tags]);
+      setNewKey('');
+      setNewVal('');
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-md animate-in fade-in duration-300 p-4">
+      <div className="glass-panel border border-neon-blue/30 w-full max-w-2xl rounded-3xl shadow-[0_0_100px_rgba(0,210,255,0.15)] animate-in zoom-in-95 slide-in-from-bottom-10 duration-500 overflow-hidden flex flex-col max-h-[90vh]">
+        
+        {/* Header */}
+        <div className="flex items-center justify-between p-6 bg-white/5 border-b border-white/10 shrink-0">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-neon-blue/20 flex items-center justify-center text-neon-blue border border-neon-blue/50 shadow-[0_0_15px_rgba(0,210,255,0.4)]">
+              <Database size={20} />
+            </div>
+            <div>
+              <h2 className="text-xl font-black text-white tracking-tighter uppercase">Entity Tag Editor</h2>
+              <div className="text-xs text-neon-blue font-bold uppercase tracking-widest">{data['@id'] || data.osm_id || data.id || 'N/A'}</div>
+            </div>
+          </div>
+          <button onClick={onClose} className="text-slate-500 hover:text-white transition-colors bg-white/5 p-2 rounded-xl">
+            <X size={20} />
+          </button>
+        </div>
+
+        {/* Content Body */}
+        <div className="flex-1 overflow-y-auto custom-scrollbar p-6 space-y-6">
+          <div className="space-y-4">
+            {/* New Tag Input */}
+            <div className="flex items-center gap-2 bg-white/5 p-2 rounded-2xl border border-white/10 focus-within:border-neon-blue/50 transition-all">
+              <input 
+                type="text" 
+                placeholder="Key (e.g. building:colour)" 
+                value={newKey} 
+                onChange={e => setNewKey(e.target.value)}
+                className="flex-1 bg-black/40 border border-white/5 rounded-xl px-4 py-3 text-white text-sm font-bold outline-none font-mono"
+              />
+              <input 
+                type="text" 
+                placeholder="Value (e.g. #ff0000)" 
+                value={newVal} 
+                onChange={e => setNewVal(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && addTag()}
+                className="flex-[1.5] bg-black/40 border border-white/5 rounded-xl px-4 py-3 text-white text-sm font-bold outline-none"
+              />
+              <button 
+                onClick={addTag}
+                disabled={!newKey.trim()}
+                className="p-3 rounded-xl bg-neon-blue text-slate-950 hover:bg-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <Plus size={20} />
+              </button>
+            </div>
+
+            {/* Tag List */}
+            <div className="space-y-2 pt-2">
+              <div className="flex px-4 pb-2">
+                <div className="flex-1 text-[10px] text-slate-500 font-black uppercase tracking-widest">Key</div>
+                <div className="flex-[1.5] text-[10px] text-slate-500 font-black uppercase tracking-widest ml-12">Value</div>
+              </div>
+              
+              {tags.map((t, i) => (
+                <div key={i} className="flex items-center gap-2 bg-white/5 p-1 rounded-xl border border-white/5 group hover:border-white/20 transition-all">
+                  <input 
+                    type="text" 
+                    value={t.key} 
+                    onChange={e => updateTag(i, 'key', e.target.value)}
+                    className="flex-1 bg-transparent border-none px-3 py-2 text-slate-300 text-xs font-bold outline-none font-mono"
+                  />
+                  <input 
+                    type={t.key.includes('colour') || t.key.includes('color') ? 'color' : 'text'} 
+                    value={t.value} 
+                    onChange={e => updateTag(i, 'value', e.target.value)}
+                    className={`flex-[1.5] bg-black/40 border border-white/5 rounded-lg px-3 py-2 text-white text-sm font-bold outline-none focus:border-neon-blue/30 transition-all ${t.key.includes('color') || t.key.includes('colour') ? 'h-10 cursor-pointer p-1' : ''}`}
+                  />
+                  <button 
+                    onClick={() => removeTag(i)}
+                    className="p-2 text-slate-500 hover:text-red-500 hover:bg-red-500/10 rounded-lg transition-all"
+                  >
+                    <Trash2 size={16} />
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="p-6 bg-black/40 border-t border-white/10 shrink-0 space-y-4">
+          <div className="flex items-center justify-between">
+             <div className="flex items-center gap-2 text-neon-blue">
+               <RefreshCw size={14} />
+               <span className="text-[10px] font-black uppercase tracking-widest">OSM Synergy Tool</span>
+             </div>
+             <button type="button" onClick={copyOSMTags} className="text-[10px] font-black text-neon-blue uppercase hover:underline">Copy Tags</button>
+          </div>
+          
+          <div className="flex gap-3 pt-2">
+            <button type="button" onClick={onClose} className="flex-1 py-4 rounded-2xl border border-white/10 text-slate-400 font-black uppercase text-xs hover:bg-white/5 transition-all">Cancel</button>
+            <button 
+              type="button" 
+              onClick={handleSync}
+              disabled={isSaving} 
+              className="flex-[2] py-4 rounded-2xl bg-neon-blue text-slate-950 font-black uppercase text-xs hover:bg-blue-400 transition-all shadow-[0_0_30px_rgba(0,210,255,0.3)] flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSaving ? <RefreshCw size={16} className="animate-spin" /> : <Save size={16} />}
+              {isSaving ? 'Synchronizing...' : 'Update High-Fi Model'}
+            </button>
+          </div>
         </div>
       </div>
     </div>

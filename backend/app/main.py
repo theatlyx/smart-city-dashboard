@@ -9,10 +9,26 @@ app = FastAPI(title="Smart City Dashboard API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/api/aircraft")
+async def get_aircraft(lamin: float = 0, lomin: float = 0, lamax: float = 0, lomax: float = 0):
+    return {"states": []}
+
+@app.get("/api/weather")
+async def get_weather(lat: float, lon: float, tz: str = "UTC"):
+    return {"current": {"temperature_2m": 28, "relative_humidity_2m": 45, "wind_speed_10m": 12, "precipitation": 0}, "daily": []}
+
+@app.get("/api/air-quality")
+async def get_aq(lat: float, lon: float, tz: str = "UTC"):
+    return {"current": {"pm2_5": 15, "pm10": 25}, "forecast": []}
+
+@app.get("/api/openaq")
+async def get_openaq(city: str = "Ahmedabad"):
+    return {"results": []}
 
 # Cache: key = (endpoint, rounded_lat, rounded_lon) → 90-second TTL
 cache = TTLCache(maxsize=200, ttl=90)
@@ -362,6 +378,71 @@ async def get_openaq(
 
 
 # ── Cities metadata ────────────────────────────────────────────────────────────
+
+import json
+from pathlib import Path
+
+# ── Building Updates ───────────────────────────────────────────────────────────
+
+GEOJSON_PATH = Path("../frontend/public/buildings_lod1_enriched.json")
+
+@app.post("/api/buildings/update")
+async def update_building(payload: dict):
+    osm_id = payload.get("osm_id")
+    updates = payload.get("updates", {})
+    
+    if not osm_id:
+        raise HTTPException(status_code=400, detail="Missing osm_id")
+
+    # Load the latest GeoJSON
+    if not GEOJSON_PATH.exists():
+        # Fallback to source if enriched doesn't exist
+        source_path = Path("../frontend/public/buildings_lod1.json")
+        if not source_path.exists():
+            raise HTTPException(status_code=404, detail="GeoJSON source not found")
+        with open(source_path, "r") as f:
+            data = json.load(f)
+    else:
+        with open(GEOJSON_PATH, "r") as f:
+            data = json.load(f)
+
+    # Find and update the feature
+    found = False
+    for feature in data.get("features", []):
+        props = feature.get("properties", {})
+        if props.get("@id") == osm_id or props.get("osm_id") == osm_id:
+            # Apply updates
+            # Apply arbitrary tags
+            for k, v in updates.items():
+                if v is not None and str(v).strip() != "":
+                    props[k] = str(v).strip()
+                elif str(v).strip() == "" and k in props:
+                    # Remove tag if empty
+                    del props[k]
+            
+            # Conflict Resolution: If building:levels are provided, ensure height is matched
+            levels_val = updates.get("building:levels") or updates.get("levels")
+            if levels_val:
+                try:
+                    levels_int = int(levels_val)
+                    props["building:levels"] = str(levels_int)
+                    props["height"] = str(levels_int * 3.5)
+                    props["building:height"] = props["height"]
+                except ValueError:
+                    pass
+            
+            found = True
+            break
+
+    if not found:
+        raise HTTPException(status_code=404, detail=f"Building {osm_id} not found in local dataset")
+
+    # Save back to disk
+    with open(GEOJSON_PATH, "w") as f:
+        json.dump(data, f)
+
+    return {"status": "success", "message": f"Building {osm_id} updated successfully"}
+
 
 @app.get("/api/cities")
 def get_cities():

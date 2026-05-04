@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Ahmedabad Metro Rail</name>
+    <description>Ahmedabad Metro Rail Rout Information</description>
+    <NetworkLink>
+      <name>Ahmedabad Metro Rail</name>
+      <Link>
+        <href><![CDATA[https://www.google.com/maps/d/kml?forcekml=1&mid=1ebnAmbRUbMyI_quB06reRZWcyfcLF8M]]></href>
+      </Link>
+    </NetworkLink>
+  </Document>
+</kml>

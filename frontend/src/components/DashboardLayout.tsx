@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Activity, Wind, Droplets, Thermometer, Bike, RefreshCw, ChevronDown, Sun, X, Calendar, CloudRain, ShieldCheck, Zap, Cpu, Navigation, Send, Video } from 'lucide-react';
+import { Activity, Navigation, Zap, Cpu, Calendar, CloudRain, Wind, X, RefreshCw, Send, ChevronRight, Box, Square, Droplets, Thermometer, Bike, ChevronDown, Sun, ShieldCheck, Video } from 'lucide-react';
 import { XAxis, YAxis, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
 import { useCityContext, CITIES } from '../context/CityContext';
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000';
+const API_BASE = 'http://127.0.0.1:8000';
 
 function aqiLabel(pm25: number) {
   if (pm25 <= 12) return { label: 'Good', color: '#34d399', bg: 'rgba(52,211,153,0.12)', glow: 'shadow-[0_0_15px_rgba(52,211,153,0.3)]' };
@@ -27,7 +27,7 @@ const tip = {
 };
 
 export default function DashboardLayout({ solarCoords, onCloseSolar }: { solarCoords: any, onCloseSolar: () => void }) {
-  const { city, setCity, selectedLocation, timeOfDay: _timeOfDay, setTimeOfDay: _setTimeOfDay, activeLayer, setActiveLayer } = useCityContext();
+  const { city, setCity, selectedLocation, activeLayer, setActiveLayer, viewMode, setViewMode } = useCityContext();
   const [weather, setWeather] = useState<any>(null);
   const [airQuality, setAirQuality] = useState<any>(null);
   const [cityBikes, setCityBikes] = useState<any>(null);
@@ -240,7 +240,7 @@ export default function DashboardLayout({ solarCoords, onCloseSolar }: { solarCo
 
                   <div className="h-28 mt-6">
                     <div className="text-[9px] text-slate-500 font-black uppercase tracking-widest mb-3">24-Hour Concentration Curve</div>
-                    <ResponsiveContainer width="100%" height="100%" minWidth={0}>
+                    <ResponsiveContainer width="100%" height="100%" aspect={2.5}>
                       <AreaChart data={aqChart}>
                         <defs>
                           <linearGradient id="colorPm" x1="0" y1="0" x2="0" y2="1">
@@ -311,6 +311,19 @@ export default function DashboardLayout({ solarCoords, onCloseSolar }: { solarCo
                 <ShieldCheck size={20} />
              </button>
           </div>
+          <div className="w-12 h-px bg-white/10" />
+          
+          <button
+            onClick={() => setViewMode(viewMode === '3D' ? '2D' : '3D')}
+            className={`w-14 h-14 rounded-2xl flex flex-col items-center justify-center gap-1.5 transition-all duration-300 relative group ${
+              viewMode === '3D' 
+                ? 'bg-neon-blue/20 text-neon-blue border border-neon-blue/30' 
+                : 'text-slate-600 hover:text-white hover:bg-white/5'
+            }`}
+          >
+            {viewMode === '3D' ? <Box size={24} /> : <Square size={24} />}
+            <span className="text-[8px] font-black uppercase tracking-[0.2em]">{viewMode}</span>
+          </button>
         </nav>
       </div>
     </div>
@@ -419,7 +432,7 @@ function SolarAnalyticsPanel({ solarData, loading, onClose }: any) {
 
           <div className="h-40 bg-white/5 rounded-2xl p-5 border border-white/5">
              <div className="text-[9px] text-slate-500 font-black uppercase tracking-widest mb-4">Monthly Production Profile</div>
-             <ResponsiveContainer width="100%" height="100%" minWidth={0}>
+             <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={solarData.monthly_energy?.map((v: number, i: number) => ({ m: i+1, v }))}>
                    <Area type="monotone" dataKey="v" stroke="#facc15" strokeWidth={3} fill="#facc15" fillOpacity={0.1} />
                    <XAxis dataKey="m" hide />

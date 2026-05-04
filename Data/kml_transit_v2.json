@@ -1,0 +1,5329 @@
+[
+  {
+    "name": "Thaltej Electric Substation",
+    "lat": 23.0490417875,
+    "lon": 72.51788586250001,
+    "metadata": {
+      "@id": "way/29490335",
+      "building": "industrial",
+      "building:colour": "lightgrey",
+      "building:levels": "3",
+      "building:material": "plaster",
+      "frequency": "50",
+      "location": "indoor",
+      "name": "Thaltej Electric Substation",
+      "power": "substation",
+      "roof:material": "concrete",
+      "roof:shape": "flat",
+      "voltage": "220000"
+    }
+  },
+  {
+    "name": "Thaltej Fire Dpt.",
+    "lat": 23.05377858,
+    "lon": 72.49908922,
+    "metadata": {
+      "@id": "way/229021982",
+      "amenity": "fire_station",
+      "building": "yes",
+      "name": "Thaltej Fire Dpt."
+    }
+  },
+  {
+    "name": "Mangaltirth Tower",
+    "lat": 23.009947,
+    "lon": 72.54787294,
+    "metadata": {
+      "@id": "way/294810160",
+      "addr:city": "Ahmedabad",
+      "addr:housenumber": "Opposite Dharnidhar Derasar",
+      "addr:street": "BRTS Route",
+      "building": "apartments",
+      "building:levels": "10",
+      "name": "Mangaltirth Tower"
+    }
+  },
+  {
+    "name": "Kankaria Railway Shed",
+    "lat": 23.0112618125,
+    "lon": 72.60374953750001,
+    "metadata": {
+      "@id": "way/317383767",
+      "building": "warehouse",
+      "name": "Kankaria Railway Shed"
+    }
+  },
+  {
+    "name": "Kankaria Railway Shed",
+    "lat": 23.01082066,
+    "lon": 72.60309681999999,
+    "metadata": {
+      "@id": "way/317383768",
+      "building": "warehouse",
+      "name": "Kankaria Railway Shed"
+    }
+  },
+  {
+    "name": "Naranpura Police Station",
+    "lat": 23.063468899999997,
+    "lon": 72.56617766,
+    "metadata": {
+      "@id": "way/318335637",
+      "addr:city": "Ahmedabad",
+      "addr:country": "IN",
+      "amenity": "police",
+      "building": "public",
+      "building:colour": "beige;blue",
+      "building:levels": "2",
+      "building:material": "plaster",
+      "name": "Naranpura Police Station",
+      "phone": "+917927472043",
+      "postal_code": "3800013",
+      "roof:material": "concrete",
+      "roof:shape": "flat"
+    }
+  },
+  {
+    "name": "Karanj Police Station",
+    "lat": 23.030662142857146,
+    "lon": 72.58414615000001,
+    "metadata": {
+      "@id": "way/318359719",
+      "amenity": "police",
+      "building": "yes",
+      "name": "Karanj Police Station"
+    }
+  },
+  {
+    "name": "Vastrapur Police Station",
+    "lat": 23.04918325882353,
+    "lon": 72.52326075882354,
+    "metadata": {
+      "@id": "way/318379671",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "380059",
+      "addr:street": "Satya Marg",
+      "amenity": "police",
+      "building": "public",
+      "building:colour": "beige",
+      "building:levels": "2",
+      "building:material": "plaster",
+      "name": "Vastrapur Police Station",
+      "roof:material": "concrete",
+      "roof:shape": "flat"
+    }
+  },
+  {
+    "name": "Ranip Police Station",
+    "lat": 23.066330414285712,
+    "lon": 72.58234827142857,
+    "metadata": {
+      "@id": "way/318485211",
+      "addr:city": "Ahmedabad",
+      "addr:country": "IN",
+      "addr:street": "Ashram Road",
+      "building": "office",
+      "building:colour": "beige",
+      "building:levels": "1",
+      "name": "Ranip Police Station",
+      "postal_code": "380027",
+      "roof:material": "concrete",
+      "roof:shape": "flat"
+    }
+  },
+  {
+    "name": "The Metropole Hotel",
+    "lat": 23.0653105,
+    "lon": 72.58423055,
+    "metadata": {
+      "@id": "way/318485212",
+      "addr:country": "IN",
+      "addr:postcode": "380027",
+      "addr:street": "Balvantrai Mehta Road",
+      "building": "hotel",
+      "building:colour": "white",
+      "building:levels": "5",
+      "building:material": "plaster",
+      "internet_access": "yes",
+      "name": "The Metropole Hotel",
+      "phone": "+91793013 0200",
+      "roof:colour": "lightgrey",
+      "roof:material": "concrete",
+      "roof:shape": "flat",
+      "smoking": "dedicated",
+      "tourism": "hotel",
+      "website": "http://www.themetropolehotel.co.in",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "name": "Navarangpura Police Station",
+    "lat": 23.0350066625,
+    "lon": 72.567223175,
+    "metadata": {
+      "@id": "way/318502779",
+      "addr:city": "Ahmedabad",
+      "addr:country": "IN",
+      "addr:state": "Gujarat",
+      "amenity": "police",
+      "building": "public",
+      "building:colour": "white;blue",
+      "building:levels": "2",
+      "building:material": "plaster",
+      "name": "Navarangpura Police Station",
+      "postal_code": "380009",
+      "roof:material": "concrete",
+      "roof:shape": "flat"
+    }
+  },
+  {
+    "name": "Khokhra Police Station",
+    "lat": 23.00165274,
+    "lon": 72.61969936,
+    "metadata": {
+      "@id": "way/318506394",
+      "addr:postcode": "380008",
+      "addr:street": "Khokhra Road",
+      "amenity": "police",
+      "building": "yes",
+      "name": "Khokhra Police Station"
+    }
+  },
+  {
+    "name": "Parasnagar BRTS stand",
+    "lat": 23.05555846,
+    "lon": 72.54319474,
+    "metadata": {
+      "@id": "way/378473414",
+      "amenity": "bus_station",
+      "building": "yes",
+      "bus": "yes",
+      "layer": "1",
+      "name": "Parasnagar BRTS stand",
+      "public_transport": "station"
+    }
+  },
+  {
+    "name": "Sola cross road BRTS stand",
+    "lat": 23.05275648,
+    "lon": 72.54680138,
+    "metadata": {
+      "@id": "way/378473566",
+      "amenity": "bus_station",
+      "building": "yes",
+      "bus": "yes",
+      "name": "Sola cross road BRTS stand",
+      "public_transport": "station"
+    }
+  },
+  {
+    "name": "Ranip GSRTC",
+    "lat": 23.0683966375,
+    "lon": 72.57571011249999,
+    "metadata": {
+      "@id": "way/451501638",
+      "amenity": "bus_station",
+      "building": "commercial",
+      "building:colour": "lightgrey",
+      "building:levels": "11",
+      "building:material": "plaster",
+      "name": "Ranip GSRTC",
+      "roof:colour": "lightgrey",
+      "roof:material": "tar_paper",
+      "roof:shape": "flat"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.077375,
+    "lon": 72.58891527777777,
+    "metadata": {
+      "@id": "way/455199842",
+      "building": "train_station"
+    }
+  },
+  {
+    "name": "intec frp II unit",
+    "lat": 22.958268699999998,
+    "lon": 72.63082242,
+    "metadata": {
+      "@id": "way/484467592",
+      "addr:city": "Nr.Vatva GIDC",
+      "addr:housenumber": "560",
+      "addr:postcode": "382445",
+      "addr:street": "Vatva railway station road",
+      "building": "yes",
+      "email": "intekfrp@gmail.com",
+      "fax": "(079)-25894542",
+      "man_made": "works",
+      "name": "intec frp II unit",
+      "phone": "+91 98250 41132",
+      "website": "https://www.intecfrpindias.com/"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.071325128571427,
+    "lon": 72.58705261428572,
+    "metadata": {
+      "@id": "way/487688882",
+      "building": "train_station",
+      "building:colour": "white",
+      "building:levels": "1",
+      "building:material": "plaster",
+      "roof:colour": "grey",
+      "roof:material": "metal",
+      "roof:shape": "flat"
+    }
+  },
+  {
+    "name": "Shivranjani",
+    "lat": 23.024307314285714,
+    "lon": 72.53126834285715,
+    "metadata": {
+      "@id": "way/551617841",
+      "amenity": "bus_station",
+      "building": "yes",
+      "name": "Shivranjani"
+    }
+  },
+  {
+    "name": "Lilamani Corporate Heights",
+    "lat": 23.06227504,
+    "lon": 72.571217,
+    "metadata": {
+      "@id": "way/572986888",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "380013",
+      "addr:street": "Ramapir no Tekro BRTS Station",
+      "building": "commercial",
+      "building:colour": "lightgrey;beige",
+      "building:levels": "9",
+      "building:material": "glass;concrete",
+      "name": "Lilamani Corporate Heights",
+      "roof:material": "concrete",
+      "roof:shape": "flat",
+      "smoking": "no",
+      "website": "https://lilamanigroup.com/lilamani-corporate-heights.aspx",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "name": "Mahila Police station West",
+    "lat": 23.02917295,
+    "lon": 72.54136998333333,
+    "metadata": {
+      "@id": "way/794663118",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "380015",
+      "addr:street": "Apang Manav Mandal Road",
+      "amenity": "police",
+      "building": "service",
+      "description": "Mahila Police station West",
+      "landuse": "government",
+      "name": "Mahila Police station West",
+      "opening_hours": "24/7",
+      "operator": "Mahila Police station West",
+      "phone": "+91 79 2630 0021",
+      "source": "local knowledge",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "name": "Iskcon Cross Road BRTS",
+    "lat": 23.0271491,
+    "lon": 72.5084866,
+    "metadata": {
+      "@id": "way/972959138",
+      "amenity": "bus_station",
+      "bench": "yes",
+      "building": "yes",
+      "bus": "yes",
+      "name": "Iskcon Cross Road BRTS",
+      "network": "BRTS",
+      "operator": "Ahmedabad Janmarg Ltd.",
+      "public_transport": "station",
+      "shelter": "yes",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "name": "Ashok Vatika BRTS",
+    "lat": 23.027944400000003,
+    "lon": 72.49567551999999,
+    "metadata": {
+      "@id": "way/972959139",
+      "amenity": "bus_station",
+      "building": "yes",
+      "bus": "yes",
+      "name": "Ashok Vatika BRTS",
+      "network": "BRTS",
+      "operator": "Ahmedabad Janmarg Ltd.",
+      "public_transport": "station"
+    }
+  },
+  {
+    "name": "Jaintilal Park BRTS",
+    "lat": 23.02843482,
+    "lon": 72.49098148,
+    "metadata": {
+      "@id": "way/972959140",
+      "amenity": "bus_station",
+      "building": "yes",
+      "bus": "yes",
+      "name": "Jaintilal Park BRTS",
+      "network": "BRTS",
+      "operator": "Ahmedabad Janmarg Ltd.",
+      "public_transport": "station"
+    }
+  },
+  {
+    "name": "Swagat Bunglows BRTS",
+    "lat": 23.027871899999997,
+    "lon": 72.48583471666667,
+    "metadata": {
+      "@id": "way/972959141",
+      "amenity": "bus_station",
+      "building": "yes",
+      "bus": "yes",
+      "name": "Swagat Bunglows BRTS",
+      "network": "BRTS",
+      "operator": "Ahmedabad Janmarg Ltd.",
+      "public_transport": "station"
+    }
+  },
+  {
+    "name": "Ambli Gam BRTS",
+    "lat": 23.0264434,
+    "lon": 72.48214291666666,
+    "metadata": {
+      "@id": "way/972959142",
+      "amenity": "bus_station",
+      "building": "yes",
+      "bus": "yes",
+      "name": "Ambli Gam BRTS",
+      "network": "BRTS",
+      "operator": "Ahmedabad Janmarg Ltd.",
+      "public_transport": "station"
+    }
+  },
+  {
+    "name": "Bopal Appoach BRTS",
+    "lat": 23.025844966666668,
+    "lon": 72.47785798333334,
+    "metadata": {
+      "@id": "way/972959143",
+      "amenity": "bus_station",
+      "bench": "yes",
+      "building": "yes",
+      "bus": "yes",
+      "name": "Bopal Appoach BRTS",
+      "network": "BRTS",
+      "operator": "Ahmedabad Janmarg Ltd.",
+      "public_transport": "station",
+      "shelter": "yes"
+    }
+  },
+  {
+    "name": "BRTS Star Bazar",
+    "lat": 23.026187116666666,
+    "lon": 72.52412011666667,
+    "metadata": {
+      "@id": "way/1006319273",
+      "bench": "yes",
+      "building": "yes",
+      "highway": "platform",
+      "name": "BRTS Star Bazar",
+      "shelter": "yes"
+    }
+  },
+  {
+    "name": "Naroda Gam",
+    "lat": 23.0771084,
+    "lon": 72.65574502,
+    "metadata": {
+      "@id": "way/1015046805",
+      "amenity": "bus_station",
+      "building": "yes",
+      "bus": "yes",
+      "name": "Naroda Gam",
+      "public_transport": "station"
+    }
+  },
+  {
+    "name": "Thaltej Metro",
+    "lat": 23.049315157142853,
+    "lon": 72.51911344285715,
+    "metadata": {
+      "@id": "way/1101021713",
+      "building": "industrial",
+      "building:colour": "lightgrey",
+      "building:levels": "3",
+      "building:material": "plaster",
+      "name": "Thaltej Metro",
+      "power": "substation",
+      "roof:material": "concrete",
+      "roof:shape": "flat"
+    }
+  },
+  {
+    "name": "APMC",
+    "lat": 22.99763682,
+    "lon": 72.53719816,
+    "metadata": {
+      "@id": "way/1101028012",
+      "building": "train_station",
+      "layer": "3",
+      "name": "APMC",
+      "name:gu": "\u0a8f \u0aaa\u0ac0 \u0a8f\u0aae \u0ab8\u0ac0",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Motera Stadium",
+    "lat": 23.09656584,
+    "lon": 72.59652634,
+    "metadata": {
+      "@id": "way/1101058044",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Motera Stadium",
+      "name:gu": "\u0aae\u0acb\u0a9f\u0ac7\u0ab0\u0abe \u0ab8\u0acd\u0a9f\u0ac7\u0aa1\u0abf\u0aaf\u0aae",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited"
+    }
+  },
+  {
+    "name": "Sabarmati",
+    "lat": 23.08546412,
+    "lon": 72.592266,
+    "metadata": {
+      "@id": "way/1101058046",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Sabarmati",
+      "name:gu": "\u0ab8\u0abe\u0aac\u0ab0\u0aae\u0aa4\u0ac0",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "wheelchair": "yes"
+    }
+  },
+  {
+    "name": "Ranip",
+    "lat": 23.06769132,
+    "lon": 72.57394574,
+    "metadata": {
+      "@id": "way/1101058047",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Ranip",
+      "name:gu": "\u0ab0\u0abe\u0aa3\u0ac0\u0aaa",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Shreyas",
+    "lat": 23.01353218,
+    "lon": 72.54910348000001,
+    "metadata": {
+      "@id": "way/1101058050",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Shreyas",
+      "name:gu": "\u0ab6\u0acd\u0ab0\u0ac7\u0aaf\u0ab8",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Rajiv Nagar",
+    "lat": 23.00969054,
+    "lon": 72.53661958,
+    "metadata": {
+      "@id": "way/1101058051",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Rajiv Nagar",
+      "name:gu": "\u0ab0\u0abe\u0a9c\u0ac0\u0ab5 \u0aa8\u0a97\u0ab0",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Jivraj Park",
+    "lat": 23.005376140000003,
+    "lon": 72.53353246,
+    "metadata": {
+      "@id": "way/1101058052",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Jivraj Park",
+      "name:gu": "\u0a9c\u0ac0\u0ab5\u0ab0\u0abe\u0a9c \u0aaa\u0abe\u0ab0\u0acd\u0a95",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Gandhigram",
+    "lat": 23.02687845333333,
+    "lon": 72.56901395999999,
+    "metadata": {
+      "@id": "way/1107146505",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "380006",
+      "building": "train_station",
+      "information": "yes",
+      "internet_access": "no",
+      "layer": "3",
+      "name": "Gandhigram",
+      "name:gu": "\u0a97\u0abe\u0a82\u0aa7\u0ac0\u0a97\u0acd\u0ab0\u0abe\u0aae",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "ref": "GG",
+      "station": "subway",
+      "subway": "yes",
+      "tourism": "information",
+      "train": "yes",
+      "wheelchair": "limited",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Hello Stationary services",
+    "lat": 23.10835174,
+    "lon": 72.5827452,
+    "metadata": {
+      "@id": "way/1180004499",
+      "building": "yes",
+      "name": "Hello Stationary services",
+      "shop": "stationery"
+    }
+  },
+  {
+    "name": "Stadium",
+    "lat": 23.03983376,
+    "lon": 72.56153874,
+    "metadata": {
+      "@id": "way/1198134736",
+      "building": "train_station",
+      "layer": "1",
+      "name": "Stadium",
+      "name:gu": "\u0ab8\u0acd\u0a9f\u0ac7\u0aa1\u0abf\u0aaf\u0aae",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Commerce Sixth Road",
+    "lat": 23.04075212,
+    "lon": 72.55284564,
+    "metadata": {
+      "@id": "way/1198134737",
+      "building": "train_station",
+      "layer": "1",
+      "name": "Commerce Sixth Road",
+      "name:gu": "\u0a95\u0acb\u0aae\u0ab0\u0acd\u0ab8 \u0a9b \u0ab0\u0ab8\u0acd\u0aa4\u0abe",
+      "network": "Ahmedabad Metro",
+      "network:wikidata": "Q1895288",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Gurukul Road",
+    "lat": 23.04590188,
+    "lon": 72.53473468,
+    "metadata": {
+      "@id": "way/1198134738",
+      "building": "train_station",
+      "layer": "1",
+      "name": "Gurukul Road",
+      "name:gu": "\u0a97\u0ac1\u0ab0\u0ac1\u0a95\u0ac1\u0ab2 \u0ab0\u0acb\u0aa1",
+      "network": "Ahmedabad Metro",
+      "network:wikidata": "Q1895288",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Doordarshan Kendra",
+    "lat": 23.0481822,
+    "lon": 72.52428218,
+    "metadata": {
+      "@id": "way/1198134739",
+      "building": "train_station",
+      "layer": "1",
+      "name": "Doordarshan Kendra",
+      "name:gu": "\u0aa6\u0ac2\u0ab0\u0aa6\u0ab0\u0acd\u0ab6\u0aa8 \u0a95\u0ac7\u0aa8\u0acd\u0aa6\u0acd\u0ab0",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Thaltej",
+    "lat": 23.04970935,
+    "lon": 72.51572795,
+    "metadata": {
+      "@id": "way/1198134740",
+      "building": "train_station",
+      "layer": "1",
+      "name": "Thaltej",
+      "name:gu": "\u0aa5\u0ab2\u0aa4\u0ac7\u0a9c",
+      "network": "Ahmedabad Metro",
+      "network:wikidata": "Q1895288",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited"
+    }
+  },
+  {
+    "name": "AEC",
+    "lat": 23.07496226,
+    "lon": 72.59311577999999,
+    "metadata": {
+      "@id": "way/1198134743",
+      "building": "train_station",
+      "layer": "3",
+      "name": "AEC",
+      "name:gu": "\u0a8f \u0a87 \u0ab8\u0ac0",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "wikidata": "Q114427225"
+    }
+  },
+  {
+    "name": "Vadaj",
+    "lat": 23.0676861,
+    "lon": 72.56562076,
+    "metadata": {
+      "@id": "way/1198134744",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Vadaj",
+      "name:gu": "\u0ab5\u0abe\u0aa1\u0a9c",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Vijay Nagar",
+    "lat": 23.056310200000002,
+    "lon": 72.56228758,
+    "metadata": {
+      "@id": "way/1198134745",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Vijay Nagar",
+      "name:gu": "\u0ab5\u0abf\u0a9c\u0aaf \u0aa8\u0a97\u0ab0",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Usmanpura",
+    "lat": 23.04595578,
+    "lon": 72.56492970000001,
+    "metadata": {
+      "@id": "way/1198134747",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Usmanpura",
+      "name:gu": "\u0a89\u0ab8\u0acd\u0aae\u0abe\u0aa8\u0aaa\u0ac1\u0ab0\u0abe",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Gujarat University Station",
+    "lat": 23.04487875,
+    "lon": 72.54336053333334,
+    "metadata": {
+      "@id": "way/1198134751",
+      "building": "train_station",
+      "layer": "1",
+      "name": "Gujarat University Station",
+      "name:gu": "\u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4 \u0aaf\u0ac1\u0aa8\u0abf\u0ab5\u0ab0\u0acd\u0ab8\u0abf\u0a9f\u0ac0 \u0ab8\u0acd\u0a9f\u0ac7\u0ab6\u0aa8",
+      "network": "Ahmedabad Metro",
+      "network:wikidata": "Q1895288",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Old High Court",
+    "lat": 23.037483315384616,
+    "lon": 72.56699311538462,
+    "metadata": {
+      "@id": "way/1198134752",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Old High Court",
+      "name:gu": "\u0a9c\u0ac2\u0aa8\u0ac0 \u0ab9\u0abe\u0a87 \u0a95\u0acb\u0ab0\u0acd\u0a9f",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Vastral Gam",
+    "lat": 22.9971742,
+    "lon": 72.66725122,
+    "metadata": {
+      "@id": "way/1198140890",
+      "air_conditioning": "yes",
+      "building": "train_station",
+      "ele": "2",
+      "internet_access": "yes",
+      "layer": "1",
+      "name": "Vastral Gam",
+      "name:gu": "\u0ab5\u0ab8\u0acd\u0aa4\u0acd\u0ab0\u0abe\u0ab2 \u0a97\u0abe\u0aae",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Nirant Cross Roads",
+    "lat": 22.99976264,
+    "lon": 72.65874837999999,
+    "metadata": {
+      "@id": "way/1198140891",
+      "air_conditioning": "yes",
+      "building": "train_station",
+      "ele": "2",
+      "internet_access": "yes",
+      "layer": "1",
+      "name": "Nirant Cross Roads",
+      "name:gu": "\u0aa8\u0abf\u0ab0\u0a82\u0aa4 \u0a95\u0acd\u0ab0\u0acb\u0ab8 \u0ab0\u0acb\u0aa1",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Vastral",
+    "lat": 23.00361286,
+    "lon": 72.64745458,
+    "metadata": {
+      "@id": "way/1198140892",
+      "addr:city": "Ahmedabad",
+      "addr:street": "Vastral",
+      "air_conditioning": "yes",
+      "building": "train_station",
+      "ele": "2",
+      "internet_access": "yes",
+      "layer": "1",
+      "name": "Vastral",
+      "name:gu": "\u0ab5\u0ab8\u0acd\u0aa4\u0acd\u0ab0\u0abe\u0ab2",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Rabari Colony",
+    "lat": 23.0054993,
+    "lon": 72.63526862,
+    "metadata": {
+      "@id": "way/1198140893",
+      "air_conditioning": "yes",
+      "building": "train_station",
+      "ele": "2",
+      "internet_access": "yes",
+      "layer": "1",
+      "name": "Rabari Colony",
+      "name:gu": "\u0ab0\u0aac\u0abe\u0ab0\u0ac0 \u0a95\u0acb\u0ab2\u0acb\u0aa8\u0ac0",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Amraiwadi",
+    "lat": 23.00770356,
+    "lon": 72.62859238,
+    "metadata": {
+      "@id": "way/1198140894",
+      "air_conditioning": "yes",
+      "building": "train_station",
+      "ele": "2",
+      "internet_access": "yes",
+      "layer": "1",
+      "name": "Amraiwadi",
+      "name:gu": "\u0a85\u0aae\u0ab0\u0ac0\u0ab5\u0abe\u0aa1\u0ac0",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "start_date": "2019-05-18",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Apparel Park",
+    "lat": 23.01063986,
+    "lon": 72.61786798,
+    "metadata": {
+      "@id": "way/1198140895",
+      "air_conditioning": "yes",
+      "building": "train_station",
+      "ele": "2",
+      "internet_access": "yes",
+      "layer": "1",
+      "name": "Apparel Park",
+      "name:gu": "\u0a8f\u0aaa\u0ab0\u0ab2 \u0aaa\u0abe\u0ab0\u0acd\u0a95",
+      "network": "Ahmedabad Metro",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Paldi",
+    "lat": 23.018458633333335,
+    "lon": 72.5622917,
+    "metadata": {
+      "@id": "way/1198140896",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Paldi",
+      "name:gu": "\u0aaa\u0abe\u0ab2\u0aa1\u0ac0",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "public_transport": "station",
+      "railway": "station",
+      "station": "subway",
+      "subway": "yes",
+      "wikipedia": "en:List of Ahmedabad Metro stations"
+    }
+  },
+  {
+    "name": "Sabarmati Swimming Pool BRTS Stand",
+    "lat": 23.08155228,
+    "lon": 72.5933486,
+    "metadata": {
+      "@id": "way/1288731476",
+      "building": "transportation",
+      "bus": "yes",
+      "name": "Sabarmati Swimming Pool BRTS Stand",
+      "public_transport": "platform"
+    }
+  },
+  {
+    "name": "Koba Circle",
+    "lat": 23.13219094,
+    "lon": 72.63094168,
+    "metadata": {
+      "@id": "way/1317807986",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Koba Circle",
+      "name:gu": "\u0a95\u0acb\u0aac\u0abe \u0ab8\u0ab0\u0acd\u0a95\u0ab2",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "start_date": "2024-09-17"
+    }
+  },
+  {
+    "name": "Narmada Canal",
+    "lat": 23.1250243,
+    "lon": 72.6219325,
+    "metadata": {
+      "@id": "way/1317807987",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Narmada Canal",
+      "name:gu": "\u0aa8\u0ab0\u0acd\u0aae\u0aa6\u0abe \u0a95\u0ac7\u0aa8\u0abe\u0ab2",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "start_date": "2024-09-17"
+    }
+  },
+  {
+    "name": "Tapovan Circle",
+    "lat": 23.12007602,
+    "lon": 72.6157125,
+    "metadata": {
+      "@id": "way/1317807988",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Tapovan Circle",
+      "name:gu": "\u0aa4\u0aaa\u0acb\u0ab5\u0aa8 \u0ab8\u0ab0\u0acd\u0a95\u0ab2",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "start_date": "2024-09-17"
+    }
+  },
+  {
+    "name": "Vishwakarma College",
+    "lat": 23.11413956,
+    "lon": 72.60826399999999,
+    "metadata": {
+      "@id": "way/1317807989",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Vishwakarma College",
+      "name:gu": "\u0ab5\u0abf\u0ab6\u0acd\u0ab5\u0a95\u0ab0\u0acd\u0aae\u0abe \u0a95\u0acb\u0ab2\u0ac7\u0a9c",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "start_date": "2024-09-17"
+    }
+  },
+  {
+    "name": "Koteshwar Road",
+    "lat": 23.10302994,
+    "lon": 72.60206328000001,
+    "metadata": {
+      "@id": "way/1317807990",
+      "building": "train_station",
+      "layer": "3",
+      "name": "Koteshwar Road",
+      "name:gu": "\u0a95\u0acb\u0a9f\u0ac7\u0ab6\u0acd\u0ab5\u0ab0 \u0ab0\u0acb\u0aa1",
+      "operator": "Gujarat Metro Rail Corporation Limited",
+      "operator:wikidata": "Q113158873",
+      "operator:wikipedia": "en:Gujarat Metro Rail Corporation Limited",
+      "start_date": "2024-09-17"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.05353622,
+    "lon": 72.49342796,
+    "metadata": {
+      "@id": "way/1342955748",
+      "building": "train_station"
+    }
+  },
+  {
+    "name": "Sardar Vallabhbhai Patel International Airport Fire Station",
+    "lat": 23.077804800000003,
+    "lon": 72.63049126,
+    "metadata": {
+      "@id": "way/1395129396",
+      "amenity": "fire_station",
+      "building": "yes",
+      "name": "Sardar Vallabhbhai Patel International Airport Fire Station",
+      "operator": "Sardar Vallabhbhai Patel International Airport"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.07832426,
+    "lon": 72.564438,
+    "metadata": {
+      "@id": "way/1487136850",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382480",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.07814548888889,
+    "lon": 72.5644397111111,
+    "metadata": {
+      "@id": "way/1487238534",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382480",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.081108359999998,
+    "lon": 72.56107793,
+    "metadata": {
+      "@id": "way/1487239936",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08070676,
+    "lon": 72.56116314,
+    "metadata": {
+      "@id": "way/1487240632",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08049944,
+    "lon": 72.56119558,
+    "metadata": {
+      "@id": "way/1487240882",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08029596,
+    "lon": 72.56123598,
+    "metadata": {
+      "@id": "way/1487241212",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.080490939999997,
+    "lon": 72.56090004,
+    "metadata": {
+      "@id": "way/1487241632",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08033598,
+    "lon": 72.56187414,
+    "metadata": {
+      "@id": "way/1487241858",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0806771,
+    "lon": 72.56204532000001,
+    "metadata": {
+      "@id": "way/1487242154",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0806164,
+    "lon": 72.56166354,
+    "metadata": {
+      "@id": "way/1487243322",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0802169,
+    "lon": 72.56030722,
+    "metadata": {
+      "@id": "way/1487250011",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08023982,
+    "lon": 72.56037246000001,
+    "metadata": {
+      "@id": "way/1487250224",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.079932640000003,
+    "lon": 72.55903362000001,
+    "metadata": {
+      "@id": "way/1487251197",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.079902463636362,
+    "lon": 72.55880581818182,
+    "metadata": {
+      "@id": "way/1487251501",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08006523,
+    "lon": 72.55852877,
+    "metadata": {
+      "@id": "way/1487251646",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.07830915,
+    "lon": 72.55875463333332,
+    "metadata": {
+      "@id": "way/1487252729",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.078234885714288,
+    "lon": 72.55882712857142,
+    "metadata": {
+      "@id": "way/1487252906",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.07816966,
+    "lon": 72.5585102,
+    "metadata": {
+      "@id": "way/1487253022",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.081162444444445,
+    "lon": 72.56385788888889,
+    "metadata": {
+      "@id": "way/1487975155",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08121748,
+    "lon": 72.5642058,
+    "metadata": {
+      "@id": "way/1487975361",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08139915,
+    "lon": 72.56382768750001,
+    "metadata": {
+      "@id": "way/1487976190",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.081479655555555,
+    "lon": 72.56417526666667,
+    "metadata": {
+      "@id": "way/1487977429",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0810684375,
+    "lon": 72.5642148125,
+    "metadata": {
+      "@id": "way/1487979695",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0808126625,
+    "lon": 72.5643061375,
+    "metadata": {
+      "@id": "way/1487980576",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08090638,
+    "lon": 72.56429130000001,
+    "metadata": {
+      "@id": "way/1487981347",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0814096,
+    "lon": 72.56532354,
+    "metadata": {
+      "@id": "way/1487981636",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.081268599999998,
+    "lon": 72.5653955,
+    "metadata": {
+      "@id": "way/1487981989",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08143604,
+    "lon": 72.56593932,
+    "metadata": {
+      "@id": "way/1487982184",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.081531719999997,
+    "lon": 72.5652928,
+    "metadata": {
+      "@id": "way/1487982379",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0815623,
+    "lon": 72.56581393333333,
+    "metadata": {
+      "@id": "way/1487984128",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08122225,
+    "lon": 72.56585436666667,
+    "metadata": {
+      "@id": "way/1487984129",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0812365,
+    "lon": 72.56597388,
+    "metadata": {
+      "@id": "way/1487984224",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08076432727273,
+    "lon": 72.5660048909091,
+    "metadata": {
+      "@id": "way/1487984602",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08070898,
+    "lon": 72.5661705,
+    "metadata": {
+      "@id": "way/1487984834",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08085292,
+    "lon": 72.5661468,
+    "metadata": {
+      "@id": "way/1487985438",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08067524615385,
+    "lon": 72.56629786153846,
+    "metadata": {
+      "@id": "way/1487986056",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.080880685714284,
+    "lon": 72.56657041428572,
+    "metadata": {
+      "@id": "way/1487987148",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.080665616666668,
+    "lon": 72.56728180833333,
+    "metadata": {
+      "@id": "way/1487987872",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0804641,
+    "lon": 72.56744341666666,
+    "metadata": {
+      "@id": "way/1487988237",
+      "addr:city": "Ahmedabad",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08054851111111,
+    "lon": 72.56770866666666,
+    "metadata": {
+      "@id": "way/1487988706",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08115106,
+    "lon": 72.56838142,
+    "metadata": {
+      "@id": "way/1487989306",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08192166,
+    "lon": 72.5707302,
+    "metadata": {
+      "@id": "way/1487989698",
+      "addr:city": "Ahmedabad",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10983042,
+    "lon": 72.56314038000001,
+    "metadata": {
+      "@id": "way/1488482599",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10976532,
+    "lon": 72.56317858,
+    "metadata": {
+      "@id": "way/1488482649",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10978372,
+    "lon": 72.56302148,
+    "metadata": {
+      "@id": "way/1488482698",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109718620000002,
+    "lon": 72.56305838,
+    "metadata": {
+      "@id": "way/1488482701",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10974262,
+    "lon": 72.56289818,
+    "metadata": {
+      "@id": "way/1488482730",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109669020000002,
+    "lon": 72.56294138000001,
+    "metadata": {
+      "@id": "way/1488482741",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10971012,
+    "lon": 72.56277648,
+    "metadata": {
+      "@id": "way/1488482745",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109630720000002,
+    "lon": 72.56282738,
+    "metadata": {
+      "@id": "way/1488482756",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10966332,
+    "lon": 72.56267328,
+    "metadata": {
+      "@id": "way/1488482780",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109586819999997,
+    "lon": 72.56272108,
+    "metadata": {
+      "@id": "way/1488482786",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10961512,
+    "lon": 72.56253618,
+    "metadata": {
+      "@id": "way/1488482798",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10934872,
+    "lon": 72.56217878,
+    "metadata": {
+      "@id": "way/1488482833",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10933032,
+    "lon": 72.56189997999999,
+    "metadata": {
+      "@id": "way/1488482869",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109296320000002,
+    "lon": 72.56204168000001,
+    "metadata": {
+      "@id": "way/1488482877",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10924112,
+    "lon": 72.56193228,
+    "metadata": {
+      "@id": "way/1488482955",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10918152,
+    "lon": 72.56179368000001,
+    "metadata": {
+      "@id": "way/1488482978",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109637220000003,
+    "lon": 72.5632476,
+    "metadata": {
+      "@id": "way/1488483033",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10958164,
+    "lon": 72.56316272000001,
+    "metadata": {
+      "@id": "way/1488483080",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109552639999997,
+    "lon": 72.56307272000001,
+    "metadata": {
+      "@id": "way/1488483106",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10951184,
+    "lon": 72.56299212,
+    "metadata": {
+      "@id": "way/1488483112",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10946354,
+    "lon": 72.56288712,
+    "metadata": {
+      "@id": "way/1488483185",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10942594,
+    "lon": 72.56280182,
+    "metadata": {
+      "@id": "way/1488483195",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10940124,
+    "lon": 72.56271081999999,
+    "metadata": {
+      "@id": "way/1488483219",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10934004,
+    "lon": 72.56261972,
+    "metadata": {
+      "@id": "way/1488483227",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10930994,
+    "lon": 72.56252162000001,
+    "metadata": {
+      "@id": "way/1488483236",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10926594,
+    "lon": 72.56243062,
+    "metadata": {
+      "@id": "way/1488483268",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10923584,
+    "lon": 72.56235122000001,
+    "metadata": {
+      "@id": "way/1488483380",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109203639999997,
+    "lon": 72.56225892,
+    "metadata": {
+      "@id": "way/1488483394",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10917894,
+    "lon": 72.56216792000001,
+    "metadata": {
+      "@id": "way/1488483425",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10912744,
+    "lon": 72.56207681999999,
+    "metadata": {
+      "@id": "way/1488483432",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109440940000002,
+    "lon": 72.56318012,
+    "metadata": {
+      "@id": "way/1488483458",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10938514,
+    "lon": 72.56303421999999,
+    "metadata": {
+      "@id": "way/1488483468",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10931104,
+    "lon": 72.56323852,
+    "metadata": {
+      "@id": "way/1488483549",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10925954,
+    "lon": 72.56309722,
+    "metadata": {
+      "@id": "way/1488483558",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10921114,
+    "lon": 72.56300261999999,
+    "metadata": {
+      "@id": "way/1488483580",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10915988,
+    "lon": 72.56285915999999,
+    "metadata": {
+      "@id": "way/1488483702",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10923374,
+    "lon": 72.56282872,
+    "metadata": {
+      "@id": "way/1488483736",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10931052,
+    "lon": 72.56293146,
+    "metadata": {
+      "@id": "way/1488483768",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10912402,
+    "lon": 72.56273088,
+    "metadata": {
+      "@id": "way/1488483778",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10918952,
+    "lon": 72.56269348000001,
+    "metadata": {
+      "@id": "way/1488484015",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109046720000002,
+    "lon": 72.56259888,
+    "metadata": {
+      "@id": "way/1488484105",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10911862,
+    "lon": 72.56256737999999,
+    "metadata": {
+      "@id": "way/1488484106",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10918742,
+    "lon": 72.56253938,
+    "metadata": {
+      "@id": "way/1488484107",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10898662,
+    "lon": 72.56248918,
+    "metadata": {
+      "@id": "way/1488484132",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10905102,
+    "lon": 72.56245768,
+    "metadata": {
+      "@id": "way/1488484145",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10912402,
+    "lon": 72.56243198,
+    "metadata": {
+      "@id": "way/1488484212",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10903062,
+    "lon": 72.56216578,
+    "metadata": {
+      "@id": "way/1488484274",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10888352,
+    "lon": 72.56225448000001,
+    "metadata": {
+      "@id": "way/1488484413",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10892752,
+    "lon": 72.56237478,
+    "metadata": {
+      "@id": "way/1488484432",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109000520000002,
+    "lon": 72.56234088,
+    "metadata": {
+      "@id": "way/1488484439",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10907572,
+    "lon": 72.56229887999999,
+    "metadata": {
+      "@id": "way/1488484459",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10866682,
+    "lon": 72.56349718,
+    "metadata": {
+      "@id": "way/1488484510",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10871882,
+    "lon": 72.56361048,
+    "metadata": {
+      "@id": "way/1488484520",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10878722,
+    "lon": 72.56357688,
+    "metadata": {
+      "@id": "way/1488484545",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10873192,
+    "lon": 72.56345298,
+    "metadata": {
+      "@id": "way/1488484715",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10886532,
+    "lon": 72.56354148,
+    "metadata": {
+      "@id": "way/1488484726",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10880842,
+    "lon": 72.56342108,
+    "metadata": {
+      "@id": "way/1488484741",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108883220000003,
+    "lon": 72.56339808,
+    "metadata": {
+      "@id": "way/1488484759",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10893212,
+    "lon": 72.56351138,
+    "metadata": {
+      "@id": "way/1488484769",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10900372,
+    "lon": 72.56337338,
+    "metadata": {
+      "@id": "way/1488484961",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10907202,
+    "lon": 72.56332728,
+    "metadata": {
+      "@id": "way/1488484962",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109133919999998,
+    "lon": 72.56328488,
+    "metadata": {
+      "@id": "way/1488484963",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109167340000003,
+    "lon": 72.5634147,
+    "metadata": {
+      "@id": "way/1488484964",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1090356,
+    "lon": 72.56346976,
+    "metadata": {
+      "@id": "way/1488484965",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108609819999998,
+    "lon": 72.56335388,
+    "metadata": {
+      "@id": "way/1488485032",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10868632,
+    "lon": 72.56332728,
+    "metadata": {
+      "@id": "way/1488485036",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10875302,
+    "lon": 72.56329188,
+    "metadata": {
+      "@id": "way/1488485068",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10884092,
+    "lon": 72.56326007999999,
+    "metadata": {
+      "@id": "way/1488485076",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10857072,
+    "lon": 72.56325297999999,
+    "metadata": {
+      "@id": "way/1488485102",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10863582,
+    "lon": 72.56322118,
+    "metadata": {
+      "@id": "way/1488485106",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108710719999998,
+    "lon": 72.56319457999999,
+    "metadata": {
+      "@id": "way/1488485135",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10880022,
+    "lon": 72.56314857999999,
+    "metadata": {
+      "@id": "way/1488485147",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10850892,
+    "lon": 72.56310968,
+    "metadata": {
+      "@id": "way/1488485208",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10857722,
+    "lon": 72.56307777999999,
+    "metadata": {
+      "@id": "way/1488485220",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10866352,
+    "lon": 72.56304238,
+    "metadata": {
+      "@id": "way/1488485240",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10877652,
+    "lon": 72.56300058000001,
+    "metadata": {
+      "@id": "way/1488485260",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10884002,
+    "lon": 72.56295637999999,
+    "metadata": {
+      "@id": "way/1488485263",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10891492,
+    "lon": 72.56292978,
+    "metadata": {
+      "@id": "way/1488485272",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10898492,
+    "lon": 72.56289618000001,
+    "metadata": {
+      "@id": "way/1488485295",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108747219999998,
+    "lon": 72.56224678,
+    "metadata": {
+      "@id": "way/1488485302",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10866912,
+    "lon": 72.56228218,
+    "metadata": {
+      "@id": "way/1488485314",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109949899999997,
+    "lon": 72.56308336,
+    "metadata": {
+      "@id": "way/1488485741",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1099255,
+    "lon": 72.56300896,
+    "metadata": {
+      "@id": "way/1488485823",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1098901,
+    "lon": 72.56292266,
+    "metadata": {
+      "@id": "way/1488485839",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109851,
+    "lon": 72.56284026,
+    "metadata": {
+      "@id": "way/1488485851",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1098228,
+    "lon": 72.56275126,
+    "metadata": {
+      "@id": "way/1488485872",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109780100000002,
+    "lon": 72.56265286,
+    "metadata": {
+      "@id": "way/1488485878",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109743400000003,
+    "lon": 72.56255586,
+    "metadata": {
+      "@id": "way/1488485901",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1096994,
+    "lon": 72.56247085999999,
+    "metadata": {
+      "@id": "way/1488485937",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10829982,
+    "lon": 72.56233535999999,
+    "metadata": {
+      "@id": "way/1488486008",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108341619999997,
+    "lon": 72.56226526,
+    "metadata": {
+      "@id": "way/1488486018",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10835382,
+    "lon": 72.56215186,
+    "metadata": {
+      "@id": "way/1488486025",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10836352,
+    "lon": 72.56206596,
+    "metadata": {
+      "@id": "way/1488486055",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108392520000002,
+    "lon": 72.56198006,
+    "metadata": {
+      "@id": "way/1488486095",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10842642,
+    "lon": 72.56189065999999,
+    "metadata": {
+      "@id": "way/1488486130",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10846192,
+    "lon": 72.56179776,
+    "metadata": {
+      "@id": "way/1488486169",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10851192,
+    "lon": 72.56169776,
+    "metadata": {
+      "@id": "way/1488486203",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10854902,
+    "lon": 72.56159785999999,
+    "metadata": {
+      "@id": "way/1488486209",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10857482,
+    "lon": 72.56151366,
+    "metadata": {
+      "@id": "way/1488486334",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108608620000002,
+    "lon": 72.56141906,
+    "metadata": {
+      "@id": "way/1488486435",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10840688,
+    "lon": 72.56282478,
+    "metadata": {
+      "@id": "way/1488486470",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1083714,
+    "lon": 72.56273175999999,
+    "metadata": {
+      "@id": "way/1488486486",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1084858,
+    "lon": 72.56234076,
+    "metadata": {
+      "@id": "way/1488486513",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1085181,
+    "lon": 72.56243016,
+    "metadata": {
+      "@id": "way/1488486536",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1085535,
+    "lon": 72.56252306,
+    "metadata": {
+      "@id": "way/1488486544",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1085906,
+    "lon": 72.56260896,
+    "metadata": {
+      "@id": "way/1488486608",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1086084,
+    "lon": 72.56268786000001,
+    "metadata": {
+      "@id": "way/1488486632",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10858662,
+    "lon": 72.56231308,
+    "metadata": {
+      "@id": "way/1488486649",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108340820000002,
+    "lon": 72.56265756,
+    "metadata": {
+      "@id": "way/1488486685",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10830532,
+    "lon": 72.56257516,
+    "metadata": {
+      "@id": "way/1488486696",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10950046,
+    "lon": 72.56120480000001,
+    "metadata": {
+      "@id": "way/1488486772",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109375460000003,
+    "lon": 72.5611897,
+    "metadata": {
+      "@id": "way/1488486781",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109239260000003,
+    "lon": 72.56117259999999,
+    "metadata": {
+      "@id": "way/1488486796",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10890586,
+    "lon": 72.5607466,
+    "metadata": {
+      "@id": "way/1488486820",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109131859999998,
+    "lon": 72.56115550000001,
+    "metadata": {
+      "@id": "way/1488486821",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10900144,
+    "lon": 72.56178462,
+    "metadata": {
+      "@id": "way/1488486838",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10888632,
+    "lon": 72.56179148,
+    "metadata": {
+      "@id": "way/1488486849",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109109519999997,
+    "lon": 72.56168868,
+    "metadata": {
+      "@id": "way/1488486857",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10924494,
+    "lon": 72.56166172,
+    "metadata": {
+      "@id": "way/1488486879",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109391340000002,
+    "lon": 72.56181882000001,
+    "metadata": {
+      "@id": "way/1488486912",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.109352440000002,
+    "lon": 72.56173931999999,
+    "metadata": {
+      "@id": "way/1488486925",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10938854,
+    "lon": 72.56134652,
+    "metadata": {
+      "@id": "way/1488486951",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10896242,
+    "lon": 72.56319558,
+    "metadata": {
+      "@id": "way/1488487038",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10903572,
+    "lon": 72.56317168000001,
+    "metadata": {
+      "@id": "way/1488487039",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10911882,
+    "lon": 72.56313318,
+    "metadata": {
+      "@id": "way/1488487040",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10907972,
+    "lon": 72.56301488,
+    "metadata": {
+      "@id": "way/1488487041",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10900152,
+    "lon": 72.56305078,
+    "metadata": {
+      "@id": "way/1488487042",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10892082,
+    "lon": 72.56309067999999,
+    "metadata": {
+      "@id": "way/1488487043",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10855182,
+    "lon": 72.56364737999999,
+    "metadata": {
+      "@id": "way/1488487073",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108444220000003,
+    "lon": 72.56369127999999,
+    "metadata": {
+      "@id": "way/1488487084",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108368419999998,
+    "lon": 72.56373638,
+    "metadata": {
+      "@id": "way/1488487106",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10826822,
+    "lon": 72.56379088000001,
+    "metadata": {
+      "@id": "way/1488487117",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108178979999998,
+    "lon": 72.56385708,
+    "metadata": {
+      "@id": "way/1488488987",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10814518,
+    "lon": 72.56378168,
+    "metadata": {
+      "@id": "way/1488489012",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10858262,
+    "lon": 72.56102386,
+    "metadata": {
+      "@id": "way/1488489137",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108537520000002,
+    "lon": 72.56113786,
+    "metadata": {
+      "@id": "way/1488489171",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10849562,
+    "lon": 72.56124826,
+    "metadata": {
+      "@id": "way/1488489205",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10845362,
+    "lon": 72.56137806,
+    "metadata": {
+      "@id": "way/1488489212",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10839562,
+    "lon": 72.56153056000001,
+    "metadata": {
+      "@id": "way/1488489221",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10833912,
+    "lon": 72.56166386,
+    "metadata": {
+      "@id": "way/1488489242",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10816342,
+    "lon": 72.56216696,
+    "metadata": {
+      "@id": "way/1488489246",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10819242,
+    "lon": 72.56208636,
+    "metadata": {
+      "@id": "way/1488489250",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10820532,
+    "lon": 72.56199166,
+    "metadata": {
+      "@id": "way/1488489257",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10824082,
+    "lon": 72.56191626,
+    "metadata": {
+      "@id": "way/1488489270",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108256920000002,
+    "lon": 72.56179886,
+    "metadata": {
+      "@id": "way/1488489299",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1081537,
+    "lon": 72.56238468000001,
+    "metadata": {
+      "@id": "way/1488489328",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1080787,
+    "lon": 72.56238478,
+    "metadata": {
+      "@id": "way/1488489335",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1079888,
+    "lon": 72.56240588,
+    "metadata": {
+      "@id": "way/1488489345",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1079064,
+    "lon": 72.56201218,
+    "metadata": {
+      "@id": "way/1488489356",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.107836900000002,
+    "lon": 72.56198997999999,
+    "metadata": {
+      "@id": "way/1488489389",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108393819999996,
+    "lon": 72.56096305999999,
+    "metadata": {
+      "@id": "way/1488489403",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108347520000002,
+    "lon": 72.56106176,
+    "metadata": {
+      "@id": "way/1488489457",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10830672,
+    "lon": 72.56118866,
+    "metadata": {
+      "@id": "way/1488489464",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.10825302,
+    "lon": 72.56131755999999,
+    "metadata": {
+      "@id": "way/1488489481",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108186319999998,
+    "lon": 72.56144846,
+    "metadata": {
+      "@id": "way/1488489483",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.1080963,
+    "lon": 72.56174328,
+    "metadata": {
+      "@id": "way/1488489598",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108053599999998,
+    "lon": 72.56188428,
+    "metadata": {
+      "@id": "way/1488489599",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "Green Part Society",
+    "lat": 23.108034420000003,
+    "lon": 72.56203456,
+    "metadata": {
+      "@id": "way/1488489600",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:housenumber": "Green Park Part II",
+      "addr:street": "Behind Chandkheda Road Railway Station Tragad gam road",
+      "building": "yes",
+      "name": "Green Part Society"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.07977251111111,
+    "lon": 72.55935348888889,
+    "metadata": {
+      "@id": "way/1488655072",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.079505333333334,
+    "lon": 72.5594259111111,
+    "metadata": {
+      "@id": "way/1488655238",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0796495,
+    "lon": 72.5596508,
+    "metadata": {
+      "@id": "way/1488655386",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0795432,
+    "lon": 72.5596608,
+    "metadata": {
+      "@id": "way/1488655462",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.07964598,
+    "lon": 72.55977436,
+    "metadata": {
+      "@id": "way/1488655624",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.07975945714286,
+    "lon": 72.55974227142858,
+    "metadata": {
+      "@id": "way/1488655778",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0798211,
+    "lon": 72.55974368,
+    "metadata": {
+      "@id": "way/1488656126",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.079858627272728,
+    "lon": 72.55972791818182,
+    "metadata": {
+      "@id": "way/1488656238",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.079944557142856,
+    "lon": 72.55971755714286,
+    "metadata": {
+      "@id": "way/1488656301",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0800442,
+    "lon": 72.55971192857143,
+    "metadata": {
+      "@id": "way/1488656595",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08012252857143,
+    "lon": 72.55967814285715,
+    "metadata": {
+      "@id": "way/1488656749",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.080165915384615,
+    "lon": 72.55978263846154,
+    "metadata": {
+      "@id": "way/1488656810",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.07998928888889,
+    "lon": 72.55959952222223,
+    "metadata": {
+      "@id": "way/1488656842",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0800570125,
+    "lon": 72.559785775,
+    "metadata": {
+      "@id": "way/1488656900",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.079757785714285,
+    "lon": 72.55958905714286,
+    "metadata": {
+      "@id": "way/1488657140",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.07988492,
+    "lon": 72.5595096,
+    "metadata": {
+      "@id": "way/1488657176",
+      "addr:city": "ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08236,
+    "lon": 72.56445894,
+    "metadata": {
+      "@id": "way/1488733587",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082569785714288,
+    "lon": 72.56440722857143,
+    "metadata": {
+      "@id": "way/1488733827",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0827737125,
+    "lon": 72.56443365,
+    "metadata": {
+      "@id": "way/1488733849",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08269932,
+    "lon": 72.56423168,
+    "metadata": {
+      "@id": "way/1488733866",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08253344,
+    "lon": 72.56426805999999,
+    "metadata": {
+      "@id": "way/1488733914",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082368985714286,
+    "lon": 72.56430435714286,
+    "metadata": {
+      "@id": "way/1488733960",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08294468,
+    "lon": 72.56426830000001,
+    "metadata": {
+      "@id": "way/1488734140",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08312465,
+    "lon": 72.5642520625,
+    "metadata": {
+      "@id": "way/1488734222",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.083349857142856,
+    "lon": 72.56417945714286,
+    "metadata": {
+      "@id": "way/1488734238",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.083404183333332,
+    "lon": 72.56437966666667,
+    "metadata": {
+      "@id": "way/1488734269",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.083472485714285,
+    "lon": 72.56450548571429,
+    "metadata": {
+      "@id": "way/1488734611",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08321046,
+    "lon": 72.56440026,
+    "metadata": {
+      "@id": "way/1488734633",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0830701,
+    "lon": 72.56461053636363,
+    "metadata": {
+      "@id": "way/1488735246",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0832367,
+    "lon": 72.56454432000001,
+    "metadata": {
+      "@id": "way/1488735276",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.083582659999998,
+    "lon": 72.5646934,
+    "metadata": {
+      "@id": "way/1488735326",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0834024,
+    "lon": 72.56471438,
+    "metadata": {
+      "@id": "way/1488735339",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0829986,
+    "lon": 72.56480444,
+    "metadata": {
+      "@id": "way/1488735406",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.083032250000002,
+    "lon": 72.5649651,
+    "metadata": {
+      "@id": "way/1488735444",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08351858,
+    "lon": 72.56486016,
+    "metadata": {
+      "@id": "way/1488735651",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.083411657142857,
+    "lon": 72.56490911428571,
+    "metadata": {
+      "@id": "way/1488735745",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.083289846666666,
+    "lon": 72.56491332,
+    "metadata": {
+      "@id": "way/1488735762",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08321792857143,
+    "lon": 72.565123,
+    "metadata": {
+      "@id": "way/1488735971",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.083424021428574,
+    "lon": 72.56505912857143,
+    "metadata": {
+      "@id": "way/1488742095",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.083517,
+    "lon": 72.56504152857143,
+    "metadata": {
+      "@id": "way/1488742112",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08372742857143,
+    "lon": 72.56495924285714,
+    "metadata": {
+      "@id": "way/1488742155",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08365996,
+    "lon": 72.56485354,
+    "metadata": {
+      "@id": "way/1488742700",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08365882,
+    "lon": 72.56518374,
+    "metadata": {
+      "@id": "way/1488742927",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08354076666667,
+    "lon": 72.56521962222222,
+    "metadata": {
+      "@id": "way/1488744619",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.083430420000003,
+    "lon": 72.56521604,
+    "metadata": {
+      "@id": "way/1488744633",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08311316,
+    "lon": 72.5651524,
+    "metadata": {
+      "@id": "way/1488745402",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0830072,
+    "lon": 72.5651017,
+    "metadata": {
+      "@id": "way/1488745826",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.083023077777778,
+    "lon": 72.56517155555555,
+    "metadata": {
+      "@id": "way/1488745964",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08302448,
+    "lon": 72.56530472,
+    "metadata": {
+      "@id": "way/1488746294",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0832108,
+    "lon": 72.56525101428572,
+    "metadata": {
+      "@id": "way/1488746643",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08270927142857,
+    "lon": 72.56525837142858,
+    "metadata": {
+      "@id": "way/1488747516",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082758300000002,
+    "lon": 72.56469066666666,
+    "metadata": {
+      "@id": "way/1488747659",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082574715384617,
+    "lon": 72.56472926153846,
+    "metadata": {
+      "@id": "way/1488747725",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0823936375,
+    "lon": 72.5647400875,
+    "metadata": {
+      "@id": "way/1488748090",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082215166666668,
+    "lon": 72.56476153333334,
+    "metadata": {
+      "@id": "way/1488748101",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082298716666667,
+    "lon": 72.56491988333333,
+    "metadata": {
+      "@id": "way/1488748109",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROADS",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08243441428571,
+    "lon": 72.56488294285715,
+    "metadata": {
+      "@id": "way/1488748249",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082424835714285,
+    "lon": 72.5650631857143,
+    "metadata": {
+      "@id": "way/1488748489",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082163275,
+    "lon": 72.56494805,
+    "metadata": {
+      "@id": "way/1488748519",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.081977220000002,
+    "lon": 72.56480286000001,
+    "metadata": {
+      "@id": "way/1488748535",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0820046,
+    "lon": 72.56493590000001,
+    "metadata": {
+      "@id": "way/1488748597",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0820189,
+    "lon": 72.56503333999999,
+    "metadata": {
+      "@id": "way/1488748603",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0832386,
+    "lon": 72.56401029999999,
+    "metadata": {
+      "@id": "way/1488748684",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08310434,
+    "lon": 72.56403584,
+    "metadata": {
+      "@id": "way/1488748713",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08301424,
+    "lon": 72.56407262,
+    "metadata": {
+      "@id": "way/1488748775",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082922257142858,
+    "lon": 72.56407217142858,
+    "metadata": {
+      "@id": "way/1488748955",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08281024,
+    "lon": 72.5641033,
+    "metadata": {
+      "@id": "way/1488748956",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0831286125,
+    "lon": 72.5639204125,
+    "metadata": {
+      "@id": "way/1488749114",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0829672375,
+    "lon": 72.5639621375,
+    "metadata": {
+      "@id": "way/1488749644",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0829956,
+    "lon": 72.56381690666667,
+    "metadata": {
+      "@id": "way/1488749732",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082800814285715,
+    "lon": 72.56383042857144,
+    "metadata": {
+      "@id": "way/1488749771",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08281567272727,
+    "lon": 72.56397568181818,
+    "metadata": {
+      "@id": "way/1488749948",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082698249999996,
+    "lon": 72.56387303333334,
+    "metadata": {
+      "@id": "way/1488749975",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08270618,
+    "lon": 72.56400156,
+    "metadata": {
+      "@id": "way/1488751066",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082632971428573,
+    "lon": 72.56401601428571,
+    "metadata": {
+      "@id": "way/1488751270",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08254662,
+    "lon": 72.56403506000001,
+    "metadata": {
+      "@id": "way/1488751423",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082446060000002,
+    "lon": 72.56405786,
+    "metadata": {
+      "@id": "way/1488751444",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082297914285714,
+    "lon": 72.56409544285714,
+    "metadata": {
+      "@id": "way/1488751693",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.081891785714284,
+    "lon": 72.56418222857143,
+    "metadata": {
+      "@id": "way/1488751788",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.081913666666665,
+    "lon": 72.56401553333333,
+    "metadata": {
+      "@id": "way/1488751979",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082130011764704,
+    "lon": 72.56398758823529,
+    "metadata": {
+      "@id": "way/1488752627",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08223135652174,
+    "lon": 72.56396728695653,
+    "metadata": {
+      "@id": "way/1488752680",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08240452,
+    "lon": 72.56392022,
+    "metadata": {
+      "@id": "way/1488752788",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082570060000002,
+    "lon": 72.56389038,
+    "metadata": {
+      "@id": "way/1488752869",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08187628,
+    "lon": 72.56387072,
+    "metadata": {
+      "@id": "way/1488753050",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08197951111111,
+    "lon": 72.5638543,
+    "metadata": {
+      "@id": "way/1488753124",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.081810100000002,
+    "lon": 72.56373872,
+    "metadata": {
+      "@id": "way/1488753229",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.081944526666668,
+    "lon": 72.56368055333334,
+    "metadata": {
+      "@id": "way/1488753397",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082104342857146,
+    "lon": 72.56365462857143,
+    "metadata": {
+      "@id": "way/1488753713",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08223258,
+    "lon": 72.56362818,
+    "metadata": {
+      "@id": "way/1488753818",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082206555172412,
+    "lon": 72.56379429310346,
+    "metadata": {
+      "@id": "way/1488753908",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08235356,
+    "lon": 72.56361555999999,
+    "metadata": {
+      "@id": "way/1488753958",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08241328888889,
+    "lon": 72.56377161111112,
+    "metadata": {
+      "@id": "way/1488754050",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082511428571426,
+    "lon": 72.56371854285715,
+    "metadata": {
+      "@id": "way/1488754435",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082609100000003,
+    "lon": 72.5637117,
+    "metadata": {
+      "@id": "way/1488754699",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0825428,
+    "lon": 72.56360056,
+    "metadata": {
+      "@id": "way/1488754820",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0827788,
+    "lon": 72.56362993571429,
+    "metadata": {
+      "@id": "way/1488755315",
+      "addr:city": "Ahmedabad",
+      "addr:district": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08296266,
+    "lon": 72.56371279999999,
+    "metadata": {
+      "@id": "way/1488755872",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082965350000002,
+    "lon": 72.56359745,
+    "metadata": {
+      "@id": "way/1488756332",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082925154545453,
+    "lon": 72.56348082727273,
+    "metadata": {
+      "@id": "way/1488756484",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.081836345454544,
+    "lon": 72.56347368181818,
+    "metadata": {
+      "@id": "way/1488757177",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0820976,
+    "lon": 72.56322924285715,
+    "metadata": {
+      "@id": "way/1488757921",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.081994236363638,
+    "lon": 72.56325933636364,
+    "metadata": {
+      "@id": "way/1488758038",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08174124285714,
+    "lon": 72.56310094285713,
+    "metadata": {
+      "@id": "way/1488758575",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.081719777777778,
+    "lon": 72.56295673333334,
+    "metadata": {
+      "@id": "way/1488768084",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.081900375,
+    "lon": 72.56290218333334,
+    "metadata": {
+      "@id": "way/1488768271",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08201244,
+    "lon": 72.56302764,
+    "metadata": {
+      "@id": "way/1488768412",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08203426,
+    "lon": 72.56288074,
+    "metadata": {
+      "@id": "way/1488768542",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08217578,
+    "lon": 72.56300352000001,
+    "metadata": {
+      "@id": "way/1488768766",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08252276,
+    "lon": 72.56294476000001,
+    "metadata": {
+      "@id": "way/1488768920",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082421314285714,
+    "lon": 72.56299962857143,
+    "metadata": {
+      "@id": "way/1488769093",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082531333333336,
+    "lon": 72.56318407777778,
+    "metadata": {
+      "@id": "way/1488769195",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0824239,
+    "lon": 72.56332158888888,
+    "metadata": {
+      "@id": "way/1488769425",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.082346471428572,
+    "lon": 72.56318328571429,
+    "metadata": {
+      "@id": "way/1488769478",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0823338,
+    "lon": 72.56333796,
+    "metadata": {
+      "@id": "way/1488769569",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08222218,
+    "lon": 72.56322016,
+    "metadata": {
+      "@id": "way/1488769661",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08223586,
+    "lon": 72.56335044,
+    "metadata": {
+      "@id": "way/1488769859",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08228212,
+    "lon": 72.56283388,
+    "metadata": {
+      "@id": "way/1488769968",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0821654,
+    "lon": 72.56286516666667,
+    "metadata": {
+      "@id": "way/1488770084",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.08190188,
+    "lon": 72.56305188,
+    "metadata": {
+      "@id": "way/1488770289",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  },
+  {
+    "name": "",
+    "lat": 23.0813506,
+    "lon": 72.56349270000001,
+    "metadata": {
+      "@id": "way/1488772212",
+      "addr:city": "Ahmedabad",
+      "addr:postcode": "382481",
+      "addr:street": "CHANDLODIA STATION ROAD",
+      "building": "yes"
+    }
+  }
+]

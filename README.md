@@ -43,6 +43,7 @@ Currently configured with digital twins for:
 |---------|-------------|--------|
 | 🏙️ **Multi-City Architecture** | Switch seamlessly between cities with different API layers and 3D rendering modes (3D Tiles vs. GeoJSON extrusion). | - |
 | 🏗️ **LOD1 3D Buildings** | High-fidelity 3D building extrusions for Ahmedabad using real-world height and level data from OpenStreetMap. | OSM |
+| 🏷️ **Dynamic Tag Editor** | Seamlessly add, edit, and delete arbitrary OpenStreetMap tags (like `building:colour`, `historic=yes`, etc.) directly from the dashboard UI with native color-pickers, acting as a local database for your Digital Twin. | OSM Synergy |
 | 🚇 **High-Fidelity Transit** | Complete visualization of Ahmedabad Metro (Phase 1 & 2), BRTS hubs, and city-wide Bus networks with ground-truth coordinates. | Gmaps KML |
 | 🌡️ **Hyper-Local Climate** | Click anywhere on the 3D map to fetch exact weather and air quality for that specific latitude/longitude. | Open-Meteo |
 | ✈️ **Live Aviation Tracking** | Real-time aircraft positions, altitudes, velocities, and headings overhead. | OpenSky Network |

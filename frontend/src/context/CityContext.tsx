@@ -54,7 +54,7 @@ export const CITIES: Record<string, CityConfig> = {
     pitch: 50,
     bearing: 10,
     buildings: 'geojson',
-    geojsonUrl: '/buildings_lod1.json',
+    geojsonUrl: '/buildings_lod1_enriched.json',
     pincodeUrl: '/ahmedabad_pincodes.json',
     groundwaterUrl: '/ahmedabad_groundwater_zones.json',
     landcoverUrl: '/landcover_ahmedabad.json',
@@ -81,10 +81,10 @@ interface CityContextValue {
   setCity: (id: string) => void;
   selectedLocation: SelectedLocation;
   setSelectedLocation: (loc: SelectedLocation) => void;
-  timeOfDay: number;
-  setTimeOfDay: (t: number) => void;
   activeLayer: ActiveLayer;
   setActiveLayer: (layer: ActiveLayer) => void;
+  viewMode: '2D' | '3D';
+  setViewMode: (m: '2D' | '3D') => void;
 }
 
 const CityContext = createContext<CityContextValue | null>(null);
@@ -97,8 +97,8 @@ export function CityProvider({ children }: { children: ReactNode }) {
     label: 'Ahmedabad City Center',
   });
   
-  const [timeOfDay, setTimeOfDay] = useState<number>(new Date().getHours() + new Date().getMinutes() / 60);
   const [activeLayer, setActiveLayer] = useState<ActiveLayer>('buildings');
+  const [viewMode, setViewMode] = useState<'2D' | '3D'>('3D');
 
   const setCity = useCallback((id: string) => {
     if (CITIES[id]) {
@@ -109,7 +109,7 @@ export function CityProvider({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <CityContext.Provider value={{ city: CITIES[cityId], setCity, selectedLocation, setSelectedLocation, timeOfDay, setTimeOfDay, activeLayer, setActiveLayer }}>
+    <CityContext.Provider value={{ city: CITIES[cityId], setCity, selectedLocation, setSelectedLocation, activeLayer, setActiveLayer, viewMode, setViewMode }}>
       {children}
     </CityContext.Provider>
   );
